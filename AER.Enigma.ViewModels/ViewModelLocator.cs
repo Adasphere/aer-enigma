@@ -21,7 +21,8 @@
         static ViewModelLocator()
         {
             Debug.WriteLine("ViewModelLocator");
-            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+            // see this for why next line is commented out: http://www.mvvmlight.net/std10
+            //ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             if (UseDesignData)
             {
@@ -50,7 +51,7 @@
             get
             {
                 Debug.WriteLine("Search");
-                return ServiceLocator.Current.GetInstance<SearchViewModel>();
+                return SimpleIoc.Default.GetInstance<SearchViewModel>();
             }
         }
 

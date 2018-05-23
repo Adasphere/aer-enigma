@@ -9,6 +9,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+    <ApplicationDefinition Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ApplicationDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AER.Enigma.Services\AER.Enigma.Services.csproj" />
     <ProjectReference Include="..\AER.Enigma.ViewModels\AER.Enigma.ViewModels.csproj" />
   </ItemGroup>

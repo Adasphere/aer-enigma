@@ -36,3 +36,7 @@
 /AER.Enigma.UI.UWP/obj
 /AER.Enigma.ViewModels/bin/Debug/netstandard2.0
 /AER.Enigma.ViewModels/obj
+/AER.Enigma.UI.UWP/bin/x86/Debug
+/AER.Enigma.UI/AER.Enigma.UI.csproj.user
+/AER.Enigma.UI.UWP/AEREnigma.UI.UWP.csproj.user
+/AER.Enigma.UI.UWP/AEREnigma.UI.UWP.csproj.user

@@ -21,7 +21,7 @@ namespace AEREnigma.UI.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new AEREnigma.UI.App());
+            LoadApplication(new AER.Enigma.UI.App());
         }
     }
 }
