@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace AEREnigma.UI.iOS
+namespace AER.Enigma.UI.iOS
 {
     public class Application
     {

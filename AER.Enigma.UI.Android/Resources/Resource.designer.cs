@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("AEREnigma.UI.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("AER.Enigma.UI.Droid.Resource", IsApplication=true)]
 
-namespace AEREnigma.UI.Droid
+namespace AER.Enigma.UI.Droid
 {
 	
 	
@@ -26,7 +26,7 @@ namespace AEREnigma.UI.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::AEREnigma.UI.Droid.Resource.Attribute.actionBarSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::AER.Enigma.UI.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

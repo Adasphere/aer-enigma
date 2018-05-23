@@ -40,3 +40,10 @@
 /AER.Enigma.UI/AER.Enigma.UI.csproj.user
 /AER.Enigma.UI.UWP/AEREnigma.UI.UWP.csproj.user
 /AER.Enigma.UI.UWP/AEREnigma.UI.UWP.csproj.user
+/AER.Enigma.Core.Tests/obj
+/AER.Enigma.Models.Tests/obj
+/AER.Enigma.Services.Tests/obj
+/AER.Enigma.Core.Tests/bin/Debug
+/AER.Enigma.Models.Tests/bin/Debug
+/AER.Enigma.Services.Tests/bin/Debug
+/AER.Enigma.UI.UWP/bin/x86/Debug
