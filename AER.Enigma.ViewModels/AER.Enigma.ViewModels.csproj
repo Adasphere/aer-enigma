@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>AER.Enigma.ViewModels</AssemblyName>
+    <RootNamespace>AER.Enigma.ViewModels</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AER.Enigma.Core\AER.Enigma.Core.csproj" />
+    <ProjectReference Include="..\AER.Enigma.Models\AER.Enigma.Models.csproj" />
+    <ProjectReference Include="..\AER.Enigma.Services\AER.Enigma.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator">
+      <HintPath>..\..\..\Users\doug.simpson.ADASPHERE\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\..\Users\doug.simpson.ADASPHERE\.nuget\packages\xamarin.forms\3.0.0.446417\lib\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -24,3 +24,15 @@
 /AEREnigma.UI/AEREnigma.UI/AEREnigma.UI.iOS/bin/iPhone/Debug
 /AEREnigma.UI/AEREnigma.UI/AEREnigma.UI.iOS/bin/iPhoneSimulator/Debug
 /AEREnigma.UI/AEREnigma.UI/AEREnigma.UI.UWP/bin/x86/Debug
+/AER.Enigma.Models/bin/Debug/netstandard2.0
+/AER.Enigma.Models/obj
+/AER.Enigma.Services/bin/Debug/netstandard2.0
+/AER.Enigma.Services/obj
+/AER.Enigma.UI/bin/Debug/netstandard2.0
+/AER.Enigma.UI/obj
+/AER.Enigma.UI.Android/bin/Debug
+/AER.Enigma.UI.Android/obj
+/AER.Enigma.UI.iOS/obj
+/AER.Enigma.UI.UWP/obj
+/AER.Enigma.ViewModels/bin/Debug/netstandard2.0
+/AER.Enigma.ViewModels/obj

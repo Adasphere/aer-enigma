@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmLightLibs" Version="5.3.0" />
+    <ProjectReference Include="..\AER.Enigma.Core\AER.Enigma.Core.csproj" />
+    <ProjectReference Include="..\AER.Enigma.Models\AER.Enigma.Models.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Class="AER.Enigma.UI.Pages.SearchPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackLayout>
+                <SearchBar x:Name="searchBar" Placeholder="Search location" Text="{Binding SearchText}" SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"></SearchBar>
+            </StackLayout>
+
+            <!--<ListView x:Name="results" ItemSelected="FacilitiesListView_OnItemSelected" Grid.Row="1" ItemsSource="{Binding FacilityResults}">-->
+            <ListView x:Name="results" Grid.Row="1" ItemsSource="{Binding Locations}" SelectedItem="{Binding SelectedLocation}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding City}"></Label>
+                                    <Label Text="{Binding State}"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
