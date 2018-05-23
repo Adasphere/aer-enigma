@@ -1,32 +1,40 @@
 using System;
+using AER.Enigma.Core.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace AEREnigma.UI
 {
-	public partial class App : Application
-	{
-		public App ()
-		{
-			InitializeComponent();
+    using AEREnigma.UI.Helpers;
+    using AEREnigma.UI.Pages;
+    using AEREnigma.ViewModels;
 
-			MainPage = new MainPage();
-		}
+    using GalaSoft.MvvmLight.Ioc;
+    using GalaSoft.MvvmLight.Views;
 
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
+            // First time initialization
+            var nav = new NavigationService();
+            nav.Configure(ViewModelLocator.WeatherPageKey, typeof(WeatherPage));
 
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+            SimpleIoc.Default.Register<INavigationService>(() => nav);
+
+            var dialog = new DialogService();
+            SimpleIoc.Default.Register<IDialogService>(() => dialog);
+
+            var navPage = new NavigationPage(new SearchPage());
+
+            nav.Initialize(navPage);
+            dialog.Initialize(navPage);
+
+            // The root page of your application
+            MainPage = navPage;
+        }
+    }
 }
