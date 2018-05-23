@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace AEREnigma.UI.UWP
+namespace AER.Enigma.UI.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace AEREnigma.UI.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new AEREnigma.UI.App());
+            LoadApplication(new AER.Enigma.UI.App());
         }
     }
 }
