@@ -36,3 +36,6 @@
 /AER.Enigma.UI.UWP/obj
 /AER.Enigma.ViewModels/bin/Debug/netstandard2.0
 /AER.Enigma.ViewModels/obj
+/AER.Enigma.Core.Tests/obj
+/AER.Enigma.Models.Tests/obj
+/AER.Enigma.Services.Tests/obj
