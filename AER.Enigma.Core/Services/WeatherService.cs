@@ -87,7 +87,6 @@ namespace AER.Enigma.Core.Services
         /// <returns>
         /// The <see cref="Task"/>.
         /// </returns>
-        //todo: make this actually async
         public async Task<List<Weather>> GetWeatherAsync(Location location)
         {
             string path = $"https://forecast.weather.gov/MapClick.php?lat={location.Latitude}&lon={location.Longitude}&FcstType=digitalDWML";
@@ -100,7 +99,27 @@ namespace AER.Enigma.Core.Services
             {
                 // returns 403 if you do not include user agent!!
                 wc.Headers.Add(HttpRequestHeader.UserAgent, "weather app prototype");
-                xmlStr = wc.DownloadString(path);
+                try
+                {
+                    // todo: review error handling guidelines
+                    // Basic error handling. If the XML download fails there won't be any data to create the weather list.
+                    xmlStr = await wc.DownloadStringTaskAsync(path);
+                }
+                catch (ArgumentNullException ae)
+                {
+                    Console.Write(ae);
+                    return new List<Weather>();
+                }
+                catch (NotSupportedException ne)
+                {
+                    Console.Write(ne);
+                    return new List<Weather>();
+                }
+                catch (WebException we)
+                {
+                    Console.Write(we);
+                    return new List<Weather>();
+                }
             }
 
             var doc = new XmlDocument();
@@ -120,7 +139,6 @@ namespace AER.Enigma.Core.Services
             XmlNodeList windGustList = doc.SelectNodes("/dwml/data/parameters/wind-speed[@type='gust']/value");
             XmlNodeList precipitationList = doc.SelectNodes("/dwml/data/parameters/hourly-qpf/value");
             XmlNodeList weatherDescriptionList = doc.SelectNodes("/dwml/data/parameters/weather/weather-conditions/value");
-
 
             List<Weather> weather = new List<Weather>();
 
@@ -167,15 +185,31 @@ namespace AER.Enigma.Core.Services
             return weather;
         }
         
-        //todo: make these extensions methods and move out of here
+        // todo: make these extensions methods and move out of here
         public static double? ToNullableDouble(string value)
         {
-            return value == null ? (double?)null : Convert.ToDouble(value);
+            try
+            {
+                return value == null ? (double?)null : Convert.ToDouble(value);
+            }
+            catch (FormatException fe)
+            {
+                Console.Write(fe);
+                return null;
+            }
         }
 
         public static int? ToNullableint(string value)
         {
-            return value == null ? (int?)null : Convert.ToInt32(value);
+            try
+            {
+                return value == null ? (int?)null : Convert.ToInt32(value);
+            }
+            catch (FormatException fe)
+            {
+                Console.Write(fe);
+                return null;
+            }
         }
     }
 }
