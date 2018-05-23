@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace AEREnigma.Models
+namespace AER.Enigma.Models
 {
     using System;
 
