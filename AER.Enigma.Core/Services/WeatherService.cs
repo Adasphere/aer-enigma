@@ -1,32 +1,93 @@
-﻿namespace AER.Enigma.Core.Services
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="WeatherService.cs" company="Adasphere">
+//   2018
+// </copyright>
+// <summary>
+//   Service for getting weather information
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace AER.Enigma.Core.Services
 {
     using System;
     using System.Collections.Generic;
     using System.Net;
     using System.Threading.Tasks;
     using System.Xml;
+
     using AEREnigma.Models;
 
+    /// <summary>
+    /// Service for getting weather information
+    /// </summary>
     public class WeatherService : IWeatherService
     {
-        public Weather GetWeather(int zipCode)
+        /// <summary>
+        /// Asynchronously gets the weather for a given zip code.
+        /// </summary>
+        /// <param name="zipCode">
+        /// The zip code with weather.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task"/> of <see cref="Weather"/>.
+        /// </returns>
+        public async Task<Weather> GetWeatherAsync(int zipCode)
         {
-            return new Weather()
-            {
-                Humidity = 50.5,
-                Temperature = 70.8
-            };
+            // Replace with an asynchronous call to a web service
+            Task<Weather> task = Task<Weather>.Factory.StartNew(
+                z =>
+                {
+                    Weather weather = new Weather()
+                    {
+                        Humidity = 50.5,
+                        Temperature = 70.8
+                    };
+
+                    return weather;
+                },
+                zipCode);
+
+            return await task;
         }
 
-        public Weather GetWeather(Location location)
+        /// <summary>
+        /// Asynchronously gets the weather for a given zip code.
+        /// </summary>
+        /// <param name="city">
+        /// The city with weather.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task"/> of <see cref="Weather"/>.
+        /// </returns>
+        public async Task<Weather> GetWeatherAsync(string city)
         {
-            return new Weather()
-            {
-                Humidity = 50.5,
-                Temperature = 70.8
-            };
+            // Replace with an asynchronous call to a web service
+            Task<Weather> task = Task<Weather>.Factory.StartNew(
+                c =>
+                {
+                    Weather weather = new Weather()
+                    {
+                        Humidity = 50.5,
+                        Temperature = 70.8
+                    };
+
+                    return weather;
+                },
+                city);
+
+            return await task;
         }
 
+        /// <summary>
+        /// Asynchronously gets the weather for a given location.
+        /// </summary>
+        /// <param name="location">
+        /// The location.
+        /// </param>
+        /// <returns>
+        /// The <see cref="Task"/>.
+        /// </returns>
+        //todo: make this actually async
         public async Task<List<Weather>> GetWeatherAsync(Location location)
         {
             string path = $"https://forecast.weather.gov/MapClick.php?lat={location.Latitude}&lon={location.Longitude}&FcstType=digitalDWML";
@@ -105,7 +166,8 @@
 
             return weather;
         }
-
+        
+        //todo: make these extensions methods and move out of here
         public static double? ToNullableDouble(string value)
         {
             return value == null ? (double?)null : Convert.ToDouble(value);
