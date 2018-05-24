@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AER.Enigma.UI.Pages.WelcomePage">
+
+    <Grid BackgroundColor="{StaticResource BackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--SUMMARY: Menu/navigation bar-->
+        <!--TODO: This section is reusable. [VB]-->
+        <Grid Grid.Row="0" 
+              Padding="10" 
+              VerticalOptions="StartAndExpand"
+              BackgroundColor="{StaticResource BackgroundMenuBarBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="1" 
+                   Text="AER-Enigma"
+                   Style="{StaticResource MenuLabelStyle}"/>
+            <StackLayout Grid.Column="2" 
+                         HeightRequest="20" 
+                         WidthRequest="20"
+                         VerticalOptions="Center">
+                <Image Source="Images/Menu.png"
+                       Aspect="AspectFit" 
+                       VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </Grid>
+
+        <!--SUMMARY: Search bar-->
+        <!--TODO: This section is reusable. [VB]-->
+        <Grid Grid.Row="1" 
+              VerticalOptions="Start"                   
+              BackgroundColor="{StaticResource BackgroundLightBlueBrush}"
+              Margin="0,-10,0,0">
+            <SearchBar x:Name="searchBar" 
+                       Margin="20"
+                       Placeholder="Search location" 
+                       Text="{Binding SearchText}" 
+                       SearchCommand="{Binding SearchCommand}" 
+                       SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"/>
+        </Grid>
+
+        <!--SUMMARY: Search list-->
+        <!--TODO: This section is reusable. [VB]-->
+        <!--<ListView x:Name="results" ItemSelected="FacilitiesListView_OnItemSelected" Grid.Row="1" ItemsSource="{Binding FacilityResults}">-->
+        <ListView x:Name="results" 
+                  Grid.Row="2" 
+                  ItemsSource="{Binding Locations}" 
+                  SelectedItem="{Binding SelectedLocation}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding City}"></Label>
+                                <Label Text="{Binding State}"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!--SUMMARY: Welcome text for new users-->
+        <StackLayout Grid.Row="2" 
+                     VerticalOptions="StartAndExpand" 
+                     HorizontalOptions="CenterAndExpand"
+                     Margin="20,30,20,10">
+            <Label Text="Weather made simple" 
+                   FontAttributes="Bold" 
+                   TextColor="{StaticResource DarkTextBrush}" 
+                   FontSize="24"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20"/>
+            <Label Text="Daily recommended apparel suggestions based on local weather and personal preferences."
+                   TextColor="{StaticResource DarkTextBrush}"
+                   FontSize="14" 
+                   HorizontalTextAlignment="Center"
+                   Margin="0,5"/>
+            <Label Text="Enter your location above or view our tutorial."
+                   TextColor="{StaticResource DarkTextBrush}"
+                   FontSize="14" 
+                   HorizontalTextAlignment="Center"
+                   Margin="0,5"/>
+        </StackLayout>
+
+        <!--SUMMARY: View tutorial option-->
+        <Button Grid.Row="3" 
+                Margin="20" 
+                Text="View tutorial" 
+                VerticalOptions="End" 
+                BackgroundColor="{StaticResource PrimaryButtonBrush}"
+                TextColor="{StaticResource LightTextBrush}"/>
+        <!--TODO: And command to navigate to the tutorial page. [VB]-->
+
+    </Grid>
+</ContentPage>

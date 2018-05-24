@@ -6,8 +6,8 @@
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WeatherPage : ContentPage
-    {
+	public partial class WelcomePage : ContentPage
+	{
         public SearchViewModel ViewModel
         {
             get
@@ -16,13 +16,16 @@
             }
         }
 
-        public WeatherPage()
+        public WelcomePage()
         {
             InitializeComponent();
 
             BindingContext = ((ViewModelLocator)Application.Current.Resources["Locator"]).Search;
 
-            this.results.ItemTapped += (s, e) => { ViewModel.SearchCommand.Execute(e.Item); };
+            this.results.ItemTapped += (s, e) =>
+            {
+                ViewModel.SearchCommand.Execute(e.Item);
+            };
 
         }
     }

@@ -6,6 +6,93 @@
     <Application.Resources>
         <ResourceDictionary>
 
+            <!--Button colors-->
+            <Color x:Key="PrimaryButtonBrush">#2e709a</Color>
+            <Color x:Key="PrimaryHoverBrush">#173359</Color>
+            <Color x:Key="PrimaryButtonTextBrush">#ffffff</Color>
+            <!--Background colors-->
+            <Color x:Key="BackgroundBrush">#ffffff</Color>
+            <Color x:Key="BackgroundLightBrush">#a1a7af</Color>
+            <Color x:Key="BackgroundMedBrush">#495259</Color>
+            <Color x:Key="BackgroundDarkBrush">#161a1f</Color>
+            <Color x:Key="BackgroundLightBlueBrush">#94c0cc</Color>
+            <Color x:Key="BackgroundDarkBlueBrush">#173359</Color>
+            <Color x:Key="BackgroundMenuBarBrush">#2e709a</Color>
+            <!--Text colors-->
+            <Color x:Key="LightTextBrush">#ffffff</Color>
+            <Color x:Key="MedTextBrush">#495259</Color>
+            <Color x:Key="DarkTextBrush">#161a1f</Color>
+            <!--Label styles-->
+            <Style x:Key="MenuLabelStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+            </Style>
+            <Style x:Key="SettingsLabelStyle" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+            </Style>
+            <Style x:Key="SettingsDetailsLabelStyle" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Margin" Value="10,0"/>
+                <Setter Property="TextColor" Value="{StaticResource MedTextBrush}"/>
+            </Style>
+            <Style x:Key="SettingsInfoLabelStyle" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Start"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Margin" Value="10,0"/>
+                <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+            </Style>
+            <Style x:Key="ForecastDetailsLabelStyle" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+            </Style>
+            <Style x:Key="ForecastDetailsValueLabelStyle" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+            </Style>
+            <Style x:Key="TutorialNumberLabelStyle" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="0,5"/>
+                <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+            </Style>
+            <Style x:Key="TutorialDetailsLabelStyle" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Margin" Value="0,5"/>
+                <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+            </Style>
+
+
+
+
+
+
+
+
+
+
+
+
+
             <Style x:Key="MainPageTitleStyle"
                    TargetType="Label">
 
