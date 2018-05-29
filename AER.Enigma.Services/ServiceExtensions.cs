@@ -9,10 +9,11 @@ namespace AER.Enigma.Services
     using System.Xml;
     using AER.Enigma.Core;
     using AER.Enigma.Models;
+    using AER.Enigma.Services.Weather;
 
     internal static class ServiceExtensions
     {
-        internal static List<Weather> ToWeatherList(this XmlDocument xmlDocument)
+        internal static List<Models.Business.Weather> ToWeatherList(this XmlDocument xmlDocument)
         {
             WeatherXmlNodes nodes = new WeatherXmlNodes()
                 .Load(xmlDocument, n => n.Starts, "/dwml/data/time-layout/start-valid-time")
@@ -52,16 +53,16 @@ namespace AER.Enigma.Services
             return target;
         }
 
-        private static List<Weather> ToWeatherList(this WeatherXmlNodes nodes)
+        private static List<Models.Business.Weather> ToWeatherList(this WeatherXmlNodes nodes)
         {
-            List<Weather> list = new List<Weather>();
+            List<Models.Business.Weather> list = new List<Models.Business.Weather>();
 
             for (int i = 0; i < nodes.Starts.Count; i++)
             {
                 try
                 {
-                    Weather item = 
-                        new Weather
+                    Models.Business.Weather item = 
+                        new Models.Business.Weather
                         {
                             StartDateTime = DateTime.Parse(nodes.Starts[i].InnerText),
                             EndDateTime = DateTime.Parse(nodes.Ends[i].InnerText),

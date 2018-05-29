@@ -91,6 +91,9 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Services\GeolocationSingleUpdateDelegate.cs" />
+    <Compile Include="Services\LocationServiceImplementation.cs" />
+    <Compile Include="Services\PermissionsService.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,10 +153,19 @@
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AER.Enigma.Models\AER.Enigma.Models.csproj">
+      <Project>{183AD664-8142-45BC-9CDA-1A55DD4F6BEC}</Project>
+      <Name>AER.Enigma.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.Services\AER.Enigma.Services.csproj">
+      <Project>{2D875E09-C589-4530-8FAA-25C27EFBA2ED}</Project>
+      <Name>AER.Enigma.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AER.Enigma.UI\AER.Enigma.UI.csproj">
       <Project>{f5ceeac8-e6d8-4ccf-8af2-861a4d785bf4}</Project>
       <Name>AER.Enigma.UI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

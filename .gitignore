@@ -47,3 +47,8 @@
 /AER.Enigma.Models.Tests/bin/Debug
 /AER.Enigma.Services.Tests/bin/Debug
 /AER.Enigma.UI.UWP/bin/x86/Debug
+/AER.Enigma.TinyIOC/bin/Debug/netstandard2.0
+/AER.Enigma.TinyIOC/obj
+/AER.Enigma.UI.iOS/bin
+/AER.Enigma.ViewModelLocator/bin/Debug/netstandard2.0
+/AER.Enigma.ViewModelLocator/obj

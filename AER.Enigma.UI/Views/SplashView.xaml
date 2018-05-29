@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AER.Enigma.UI.Views.SplashView">
+    <ContentPage.Content>
+        <Grid BackgroundColor="{StaticResource BackgroundLightBlueBrush}">
+            <StackLayout VerticalOptions="CenterAndExpand" 
+                         HorizontalOptions="CenterAndExpand"
+                         Padding="10">
+                <Label Text="Aer-Enigma"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource DarkTextBrush}"
+                       FontSize="50" />
+                <ProgressBar IsVisible="True"
+                             ProgressColor="{StaticResource PrimaryButtonBrush}"
+                             HeightRequest="350"
+                             Progress="10"/>
+                <!--TODO: Modify progress bar to display a rotating image animation [VB]-->
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

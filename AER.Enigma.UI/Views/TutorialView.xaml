@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:AER.Enigma.UI.Views.Templates;assembly=AER.Enigma.UI"
+             x:Class="AER.Enigma.UI.Views.TutorialView">
+    <ContentPage.Content>
+        <Grid BackgroundColor="{StaticResource BackgroundLightBlueBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--SUMMARY: Menu/navigation bar-->
+            <templates:MenuNavigationBarTemplate Grid.Row="0"/>
+    
+            <!--SUMMARY: Helpful info-->
+            <StackLayout Grid.Row="1" 
+                     VerticalOptions="StartAndExpand" 
+                     HorizontalOptions="CenterAndExpand"
+                     Margin="20,30,20,10">
+                <Label Text="Weather made simple" 
+                   FontAttributes="Bold" 
+                   TextColor="{StaticResource DarkTextBrush}" 
+                   FontSize="24"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.10*"/>
+                        <ColumnDefinition Width="0.90*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0"
+                       Grid.Row="0" 
+                       Text="1"
+                       Style="{StaticResource TutorialNumberLabelStyle}"/>
+                    <Label Grid.Column="1"
+                       Grid.Row="0" 
+                       Text="Set your temperature display. Either in Fahrenheit or Celsius."
+                       Style="{StaticResource TutorialDetailsLabelStyle}"/>
+                    <Label Grid.Column="0"
+                       Grid.Row="1" 
+                       Text="2"
+                       Style="{StaticResource TutorialNumberLabelStyle}"/>
+                    <Label Grid.Column="1"
+                       Grid.Row="1" 
+                       Text="Apply your personal temperature preferences that will be used to determine the right apparel for you."
+                       Style="{StaticResource TutorialDetailsLabelStyle}"/>
+                    <Label Grid.Column="0"
+                       Grid.Row="2" 
+                       Text="3"
+                       Style="{StaticResource TutorialNumberLabelStyle}"/>
+                    <Label Grid.Column="1"
+                       Grid.Row="2" 
+                       Text="Any locations you have entered will be saved to your settings preferences. You will be able to switch out which location you wanted to set as your default. Your default will display upon application startup."
+                       Style="{StaticResource TutorialDetailsLabelStyle}"/>
+                </Grid>
+            </StackLayout>
+
+            <!--SUMMARY: Modify preferences-->
+            <Button Grid.Row="2" 
+                Margin="20" 
+                Text="Modify preferences" 
+                VerticalOptions="End" 
+                BackgroundColor="{StaticResource PrimaryButtonBrush}"
+                TextColor="{StaticResource LightTextBrush}"/>
+            <!--TODO: And command to navigate to the settings page. [VB]-->
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

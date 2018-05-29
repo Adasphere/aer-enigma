@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:templates="clr-namespace:AER.Enigma.UI.Views.Templates;assembly=AER.Enigma.UI"
+    xmlns:behaviors="clr-namespace:AER.Enigma.UI.Behaviors;assembly=AER.Enigma.UI"
+    xmlns:base="clr-namespace:AER.Enigma.UI.ViewModels.Base;assembly=AER.Enigma.UI.ViewModels"
+    xmlns:base1="clr-namespace:AER.Enigma.UI.ViewModels.Base;assembly=AER.Enigma.UI.ViewModels"
+    x:Class="AER.Enigma.UI.Views.WeatherView"
+    base1:ViewModelLocator.AutoWireViewModel="True"
+>
+    <Grid BackgroundColor="{StaticResource BackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--SUMMARY: Menu/navigation bar-->
+        <templates:MenuNavigationBarTemplate Grid.Row="0"/>
+
+        <!--SUMMARY: Search bar-->
+        <!--TODO: This section is reusable. [VB]-->
+        <templates:LocationSearchTemplate Grid.Row="1"/>
+
+        <!--SUMMARY: Search list-->
+        <!--TODO: This section is reusable. [VB]-->
+        <templates:LocationSearchResultsTemplate Grid.Row="2"/>
+
+        <!--SUMMARY: Summary-->
+        <StackLayout Grid.Row="2" 
+                     VerticalOptions="Start" 
+                     HorizontalOptions="CenterAndExpand"
+                     Margin="20,30,20,0">
+            <!--TODO: Add short description binding. [VB]-->
+            <Label Text="Somewhat chilly" 
+                   FontAttributes="Bold" 
+                   TextColor="{StaticResource DarkTextBrush}" 
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20"/>
+            <!--TODO: Add clothing recomendation binding. [VB]-->
+            <Label Text="Wear a t-shirt and shorts today." 
+                   TextColor="{StaticResource DarkTextBrush}" 
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="20,20,20,0"/>
+            <!--TODO: Add accessories information binding. [VB]-->
+            <Label Text="Bring a light jacket."
+                   TextColor="{StaticResource DarkTextBrush}"
+                   FontSize="18" 
+                   HorizontalTextAlignment="Center"
+                   Margin="0,5,0,0"/>
+        </StackLayout>
+
+        <!--SUMMARY: Details-->
+        <Grid Grid.Row="3"
+              VerticalOptions="StartAndExpand"
+              BackgroundColor="{StaticResource BackgroundDarkBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Text="Forecast details"
+                       TextColor="{StaticResource LightTextBrush}"
+                       FontSize="16" 
+                       HorizontalTextAlignment="Center"
+                       Margin="20"/>
+            </StackLayout>
+            <!--SUMMARY: Border line-->
+            <StackLayout Grid.Row="1"
+                         HeightRequest="1"
+                         BackgroundColor="{StaticResource BackgroundMedBrush}"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Vertical"
+                             Grid.Column="0" 
+                             Grid.Row="0"
+                             Margin="20">
+                    <Label Text="HIGH TEMPERATURE"
+                       Style="{StaticResource ForecastDetailsLabelStyle}"/>
+                    <Label Text="{Binding Temperature}"
+                           Style="{StaticResource ForecastDetailsValueLabelStyle}"/>
+                    <!--TODO: Add detail bindings. [VB]-->
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Grid.Column="1" 
+                             Grid.Row="0"
+                             Margin="20">
+                    <Label Text="LOW TEMPERATURE"
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/>
+                    <Label Text="60"
+                           Style="{StaticResource ForecastDetailsValueLabelStyle}"/>
+                    <!--TODO: Add detail bindings. [VB]-->
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Grid.Column="0" 
+                             Grid.Row="1"
+                             Margin="20">
+                    <Label Text="DETAIL LABEL"
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/>
+                    <Label Text="Value"
+                           Style="{StaticResource ForecastDetailsValueLabelStyle}"/>
+                    <!--TODO: Add detail bindings. [VB]-->
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Grid.Column="1" 
+                             Grid.Row="1"
+                             Margin="20">
+                    <Label Text="DETAIL LABEL"
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/>
+                    <Label Text="Value"
+                           Style="{StaticResource ForecastDetailsValueLabelStyle}"/>
+                    <!--TODO: Add detail bindings. [VB]-->
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Grid.Column="0" 
+                             Grid.Row="2"
+                             Margin="20">
+                    <Label Text="DETAIL LABEL"
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/>
+                    <Label Text="Value"
+                           Style="{StaticResource ForecastDetailsValueLabelStyle}"/>
+                    <!--TODO: Add detail bindings. [VB]-->
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Grid.Column="1" 
+                             Grid.Row="2"
+                             Margin="20">
+                    <Label Text="DETAIL LABEL"
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/>
+                    <Label Text="Value"
+                           Style="{StaticResource ForecastDetailsValueLabelStyle}"/>
+                    <!--TODO: Add detail bindings. [VB]-->
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -7,6 +7,8 @@ namespace AER.Enigma.Services.Design
     using System.Threading.Tasks;
 
     using AER.Enigma.Models;
+    using AER.Enigma.Models.Business;
+    using AER.Enigma.Services.Weather;
 
     public class DesignWeatherService : IWeatherService
     {

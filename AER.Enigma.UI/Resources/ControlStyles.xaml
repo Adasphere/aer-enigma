@@ -1,0 +1,121 @@
+﻿<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+>
+    <!--Label styles-->
+    <Style x:Key="MenuLabelStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+    </Style>
+    <Style x:Key="SettingsLabelStyle" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+    </Style>
+    <Style x:Key="SettingsDetailsLabelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Margin" Value="10,0"/>
+        <Setter Property="TextColor" Value="{StaticResource MedTextBrush}"/>
+    </Style>
+    <Style x:Key="SettingsInfoLabelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Start"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Margin" Value="10,0"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+    </Style>
+    <Style x:Key="ForecastDetailsLabelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+    </Style>
+    <Style x:Key="ForecastDetailsValueLabelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+    </Style>
+    <Style x:Key="TutorialNumberLabelStyle" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+    </Style>
+    <Style x:Key="TutorialDetailsLabelStyle" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+    </Style>
+    <Style x:Key="MainPageTitleStyle"
+                   TargetType="Label">
+
+        <Setter Property="HorizontalOptions"
+                        Value="Center" />
+
+    </Style>
+    <Style x:Key="SecondaryPageTitleStyle"
+                   TargetType="Label"
+                   BasedOn="{StaticResource MainPageTitleStyle}">
+
+        <Setter Property="TextColor"
+                        Value="#FFFA28D4" />
+
+    </Style>
+    <Style x:Key="DetailsPageTitleStyle"
+                   TargetType="Label"
+                   BasedOn="{StaticResource SecondaryPageTitleStyle}">
+
+        <!--Cannot set the FontSize in Style, known bug in Forms V1.3-->
+        <Setter Property="HorizontalOptions"
+                        Value="Start" />
+
+        <Setter Property="TextColor"
+                        Value="#FFFA28D4" />
+
+    </Style>
+
+    <Style x:Key="LastLoadedTextStyle"
+                   TargetType="Label">
+
+        <!--Cannot set the FontSize in Style, known bug in Forms V1.3-->
+        <Setter Property="HorizontalOptions"
+                        Value="Start" />
+
+    </Style>
+
+    <Style x:Key="ButtonStyle"
+                   TargetType="Button">
+
+        <Setter Property="BackgroundColor"
+                        Value="#FFAAAAAA" />
+
+        <Setter Property="HorizontalOptions"
+                        Value="Fill" />
+
+        <Setter Property="BorderRadius"
+                        Value="0" />
+
+        <Setter Property="BorderColor"
+                        Value="White" />
+
+        <Setter Property="TextColor"
+                        Value="White" />
+
+        <Setter Property="BorderWidth"
+                        Value="2" />
+    </Style>
+</ResourceDictionary>

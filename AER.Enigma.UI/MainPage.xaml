@@ -2,13 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AER.Enigma.UI"
+             xmlns:views="clr-namespace:AER.Enigma.UI.Views;assembly=AER.Enigma.UI"
              x:Class="AER.Enigma.UI.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Title>
+        <OnPlatform x:TypeArguments="x:String">
+            <On Platform="iOS, UWP, WinRT, WinPhone" Value="Aer-Enigma" />
+        </OnPlatform>
+    </ContentPage.Title>
 
 </ContentPage>
