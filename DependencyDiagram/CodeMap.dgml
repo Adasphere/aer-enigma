@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" FilterState="CodeMap_SolutionFolder,CodeMap_TestAsset,InheritsFrom,Implements,CodeSchema_Calls,CodeSchema_FunctionPointer,CodeSchema_FieldRead,CodeSchema_FieldWrite,References,CodeSchema_ReturnTypeLink,CodeSchema_AttributeUse,CodeMap_ExternalReference,UncategorizedRelationship,CodeSchema_Namespace,CodeSchema_Delegate,CodeSchema_Property,CodeSchema_Field,CodeSchema_Method,CodeSchema_Event,CodeSchema_Struct,CodeSchema_Class,CodeSchema_Interface" GraphDirection="TopToBottom" Layout="ForceDirected" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="@140" Category="CodeSchema_Assembly" Bounds="337.356794698487,181.000500270906,165.853333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" FilePath="$(6e5bd7bc-daee-44ce-b309-dcd1613731ec.OutputPath)" Group="Collapsed" Label="AER.Enigma.Core.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@188" Category="CodeSchema_Assembly" Bounds="211.249308809416,-54.799599878572,152.38,44.0000000000002" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="NotFetched" FetchedChildrenCount="3" FilePath="$(f5ceeac8-e6d8-4ccf-8af2-861a4d785bf4.OutputPath)" Group="Expanded" Label="AER.Enigma.UI.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@38" Category="CodeSchema_Assembly" Bounds="91.21022803182,-133.999333062427,183.733333333334,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" ErrorMessage="Unreferenced node detected:AEREnigma.UI.UWP.exe ((Assembly=file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.UI.UWP/bin/x86/Debug/AEREnigma.UI.UWP.exe))" FilePath="$(f99d8fd4-a66b-4b47-b47a-30827b013d3d.OutputPath)" Group="Collapsed" IsUnreferenced="True" Label="AEREnigma.UI.UWP.exe" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.exe" />
+    </Node>
+    <Node Id="@390" Category="CodeSchema_Assembly" Bounds="45.2585600585512,43.000200278056,183.333333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" FilePath="$(2d875e09-c589-4530-8faa-25c27efba2ed.OutputPath)" Group="Collapsed" Label="AER.Enigma.Services.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@40" Bounds="326.936397783288,-133.999333062427,184.886666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" ErrorLevel="NoResult" ErrorMessage="Unreferenced node detected:AEREnigma.UI.iOS.exe ((Assembly=file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.UI.iOS/bin/iPhone/Debug/AEREnigma.UI.iOS.exe))" FilePath="$(f91c384c-87fa-4236-ba8b-a929f5916523.OutputPath)" Group="Collapsed" IsUnreferenced="True" Label="AEREnigma.UI.iOS.exe" UseManualLocation="True" />
+    <Node Id="@452" Category="CodeSchema_Assembly" Bounds="74.7525769343915,191.000100278056,180.093333333333,24.9999999999999" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" FilePath="$(183ad664-8142-45bc-9cda-1a55dd4f6bec.OutputPath)" Group="Collapsed" Label="AER.Enigma.Models.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@454" Category="CodeSchema_Assembly" Bounds="310.309190520533,40,205.403333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" FilePath="$(a1327745-ebc9-4c3a-bbe4-2acd21f64575.OutputPath)" Group="Collapsed" Label="AER.Enigma.ViewModels.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@546" Category="CodeSchema_Assembly" Bounds="353.468956620967,633.666966938273,195.1,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" ErrorMessage="Unreferenced node detected:AER.Enigma.Core.Tests.dll ((Assembly=file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Core.Tests/bin/Debug/AER.Enigma.Core.Tests.dll))" FilePath="$(8566b1c9-f55c-4c08-bfdf-e75d6299760b.OutputPath)" Group="Collapsed" IsUnreferenced="True" Label="AER.Enigma.Core.Tests.dll" UseManualLocation="True">
+      <Category Ref="CodeMap_TestAsset" />
+      <Category Ref="CodeMap_TestProject" />
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@548" Category="CodeSchema_Assembly" Bounds="346.728956620967,576.666866938273,212.58,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" ErrorMessage="Unreferenced node detected:AER.Enigma.Services.Tests.dll ((Assembly=file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Services.Tests/bin/Debug/AER.Enigma.Services.Tests.dll))" FilePath="$(413c78b4-57b5-4554-a897-b30642798d92.OutputPath)" Group="Collapsed" IsUnreferenced="True" Label="AER.Enigma.Services.Tests.dll" UseManualLocation="True">
+      <Category Ref="CodeMap_TestAsset" />
+      <Category Ref="CodeMap_TestProject" />
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@550" Category="CodeSchema_Assembly" Bounds="349.34895662097,521.666766938273,209.34,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" ErrorMessage="Unreferenced node detected:AER.Enigma.Models.Tests.dll ((Assembly=file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Models.Tests/bin/Debug/AER.Enigma.Models.Tests.dll))" FilePath="$(c3dfd195-d722-4a6b-9d80-8cd95864ab6e.OutputPath)" Group="Collapsed" IsUnreferenced="True" Label="AER.Enigma.Models.Tests.dll" UseManualLocation="True">
+      <Category Ref="CodeMap_TestAsset" />
+      <Category Ref="CodeMap_TestProject" />
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@625" Category="CodeSchema_Namespace" Bounds="121.331645694939,-91.8497953111101,133.9,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AER‎.Enigma‎.UI" UseManualLocation="True" />
+    <Node Id="@626" Category="CodeSchema_Namespace" Bounds="121.331645694939,18.1502046888899,176.8,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AER‎.Enigma‎.UI‎.Helpers" UseManualLocation="True" />
+    <Node Id="@627" Category="CodeSchema_Namespace" Bounds="121.331645694939,-36.8497953111101,167.353333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AER‎.Enigma‎.UI‎.Pages" UseManualLocation="True" />
+    <Node Id="@84" Category="CodeSchema_Assembly" Bounds="196.805189338972,-188.999433062427,197.753333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" ErrorMessage="Unreferenced node detected:AER.Enigma.UI.Android.dll ((Assembly=file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.UI.Android/bin/Debug/AER.Enigma.UI.Android.dll))" FilePath="$(b40ded54-d16d-4a82-a559-bd9285ca2a91.OutputPath)" Group="Collapsed" IsUnreferenced="True" Label="AER.Enigma.UI.Android.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="Model{73787E04-A126-4082-B4F0-95763B628CFB}" Category="CodeMap_SolutionFolder" Bounds="-501.125636354627,54.1001504865366,424.713333333334,305.0006" ErrorMessage="Unreferenced node detected:Model (Model{73787E04-A126-4082-B4F0-95763B628CFB})" Group="Expanded" IsUnreferenced="True" Label="Model" UseManualLocation="True" />
+    <Node Id="ViewModel{A048539C-F80B-46B8-83BE-102B60D4A324}" Category="CodeMap_SolutionFolder" Bounds="-220.245787450896,-172.900149515817,245.403333333333,85.0002" ErrorMessage="Unreferenced node detected:ViewModel (ViewModel{A048539C-F80B-46B8-83BE-102B60D4A324})" Group="Expanded" IsUnreferenced="True" Label="ViewModel" UseManualLocation="True" />
+    <Node Id="View{FDFC812E-C544-4B44-B79A-0F25C9C7AECD}" Category="CodeMap_SolutionFolder" Bounds="-727.507217434174,-580.524737748446,782.411129947206,325.624488234983" ErrorMessage="Unreferenced node detected:View (View{FDFC812E-C544-4B44-B79A-0F25C9C7AECD})" Group="Expanded" IsUnreferenced="True" Label="View" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="@188" Target="@140" Category="CodeMap_ExternalReference" Bounds="258.17098746102,251.000200271606,145.027744440846,133.894909286674" />
+    <Link Source="@188" Target="@390" Category="CodeMap_ProjectReference" Bounds="165.995242510903,-10.7995998785719,83.9433041226221,49.245737514236" />
+    <Link Source="@188" Target="@452" Category="CodeMap_ExternalReference" Bounds="671.288757324219,251.000198364258,242.686889648438,135.293167114258" />
+    <Link Source="@188" Target="@454" Category="CodeMap_ProjectReference" Bounds="-179.708497086135,-358.915966763141,413.688940425483,9.20002412987395" />
+    <Link Source="@188" Target="@625" Category="Contains" FetchingParent="@188" />
+    <Link Source="@188" Target="@626" Category="Contains" FetchingParent="@188" />
+    <Link Source="@188" Target="@627" Category="Contains" FetchingParent="@188" />
+    <Link Source="@38" Target="@188" Category="CodeMap_ProjectReference" Bounds="182.030356062065,-295.471821370543,49.1641287646554,25.8158943615253" />
+    <Link Source="@38" Target="@625" Category="CodeSchema_Calls" Bounds="-150.852083858598,364,327.074629489227,114.037208142533" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@390" Target="@140" Category="CodeMap_ProjectReference" Bounds="162.591677690779,68.000200278056,223.933906555648,109.059637255712" />
+    <Link Source="@390" Target="@452" Category="CodeMap_ProjectReference" Bounds="139.279452714208,68.000200278056,21.499807973263,114.155395838197" />
+    <Link Source="@40" Target="@188" Category="CodeMap_ProjectReference" Bounds="327.63327854918,-108.999333062427,73.1527632784156,49.1784888284597" />
+    <Link Source="@454" Target="@140" Category="CodeMap_ProjectReference" Bounds="413.655589312616,65,5.51954904398031,107.012448007314" />
+    <Link Source="@454" Target="@390" Category="CodeMap_ProjectReference" Bounds="237.591362034233,53.6160507280823,72.7178284863,0.790218776975671" />
+    <Link Source="@454" Target="@452" Category="CodeMap_ProjectReference" Bounds="193.035508332687,65,199.428043494361,121.322504337429" />
+    <Link Source="@625" Target="@454" Category="CodeSchema_Calls" Bounds="-268.98776460311,-349.900549513463,183.250244538025,159.100128634992" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@625" Target="@626" Category="References" Bounds="434.703796386719,176.000198364258,102.040466308594,27.6464385986328" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="7">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@625" Target="@627" Category="CodeSchema_Calls" Bounds="582.880615234375,176.000198364258,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@627" Target="@454" Category="CodeSchema_Calls" Bounds="-199.708497086135,-351.690519730687,433.929067757981,37.8007636490112" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="9">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@84" Target="@188" Category="CodeMap_ProjectReference" Bounds="-156.032359617725,-295.471821370543,51.0121972312333,25.9227380382425" />
+    <Link Source="@84" Target="@625" Category="CodeSchema_Calls" Bounds="-132.374209193693,504.494559953889,277.598593055167,40.5055400416114" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+  </Links>
+  <Categories>
+    <Category Id="CodeMap_ExternalReference" Label="External Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
+    <Category Id="CodeMap_ProjectReference" Label="Project Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
+    <Category Id="CodeMap_SolutionFolder" Label="Solution Folder" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Solution Folder" />
+    <Category Id="CodeMap_TestAsset" Label="Test Asset" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Test Assets" />
+    <Category Id="CodeMap_TestProject" Label="Test Project" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Test Projects" />
+    <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
+    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
+    <Category Id="CodeSchema_Namespace" Label="Namespace" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Namespaces" />
+    <Category Id="CodeSchema_ReturnTypeLink" Label="Return" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Return types" OutgoingActionLabel="Return types" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+    <Category Id="FileSystem.Category.FileOfType.dll" BasedOn="CodeSchema_Assembly" CanBeDataDriven="True" IsProviderRoot="False" />
+    <Category Id="FileSystem.Category.FileOfType.exe" BasedOn="CodeSchema_Assembly" CanBeDataDriven="True" IsProviderRoot="False" />
+    <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="ErrorLevel" Label="Error Level" Description="Used to associate an error level with a node or link in the graph" Group="Analysis" DataType="Microsoft.VisualStudio.Progression.ErrorLevel" />
+    <Property Id="ErrorMessage" Label="Error" Description="Error" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FetchedChildrenCount" DataType="System.Int32" />
+    <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
+    <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
+    <Property Id="FilterState" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="IsSourceVirtualized" Label="Link Source Virtualized" Description="If true, the link source end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="IsTargetVirtualized" Label="Link Target Virtualized" Description="If true, the link target end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="IsUnreferenced" Label="Unreferenced" Description="Node has no links pointing to it from other nodes in the graph" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="ToolTip" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="37" Uri="Assembly=$(f99d8fd4-a66b-4b47-b47a-30827b013d3d.OutputPathUri)" />
+    <Alias n="38" Id="(@37)" />
+    <Alias n="39" Uri="Assembly=$(f91c384c-87fa-4236-ba8b-a929f5916523.OutputPathUri)" />
+    <Alias n="40" Id="(@39)" />
+    <Alias n="83" Uri="Assembly=$(b40ded54-d16d-4a82-a559-bd9285ca2a91.OutputPathUri)" />
+    <Alias n="84" Id="(@83)" />
+    <Alias n="139" Uri="Assembly=$(6e5bd7bc-daee-44ce-b309-dcd1613731ec.OutputPathUri)" />
+    <Alias n="140" Id="(@139)" />
+    <Alias n="187" Uri="Assembly=$(f5ceeac8-e6d8-4ccf-8af2-861a4d785bf4.OutputPathUri)" />
+    <Alias n="188" Id="(@187)" />
+    <Alias n="389" Uri="Assembly=$(2d875e09-c589-4530-8faa-25c27efba2ed.OutputPathUri)" />
+    <Alias n="390" Id="(@389)" />
+    <Alias n="451" Uri="Assembly=$(183ad664-8142-45bc-9cda-1a55dd4f6bec.OutputPathUri)" />
+    <Alias n="452" Id="(@451)" />
+    <Alias n="453" Uri="Assembly=$(a1327745-ebc9-4c3a-bbe4-2acd21f64575.OutputPathUri)" />
+    <Alias n="454" Id="(@453)" />
+    <Alias n="545" Uri="Assembly=$(8566b1c9-f55c-4c08-bfdf-e75d6299760b.OutputPathUri)" />
+    <Alias n="546" Id="(@545)" />
+    <Alias n="547" Uri="Assembly=$(413c78b4-57b5-4554-a897-b30642798d92.OutputPathUri)" />
+    <Alias n="548" Id="(@547)" />
+    <Alias n="549" Uri="Assembly=$(c3dfd195-d722-4a6b-9d80-8cd95864ab6e.OutputPathUri)" />
+    <Alias n="550" Id="(@549)" />
+    <Alias n="625" Id="(@187 Namespace=AER.Enigma.UI)" />
+    <Alias n="626" Id="(@187 Namespace=AER.Enigma.UI.Helpers)" />
+    <Alias n="627" Id="(@187 Namespace=AER.Enigma.UI.Pages)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Unreferenced" ToolTip="Node has no links pointing to it from other nodes in the graph" ValueLabel="True">
+      <Condition Expression="IsUnreferenced" />
+      <Setter Property="Background" Value="Purple" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Error" ValueLabel="Error Level">
+      <Condition Expression="HasValue('ErrorLevel')" />
+      <Setter Property="Icon" Value="Node.Error" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF0E70C0" />
+      <Setter Property="Stroke" Value="#FF0E70C0" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="Inherits From" ValueLabel="True">
+      <Condition Expression="HasCategory('InheritsFrom')" />
+      <Setter Property="Stroke" Value="#FF00A600" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="Implements" ValueLabel="True">
+      <Condition Expression="HasCategory('Implements')" />
+      <Setter Property="Stroke" Value="#8000A600" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="Calls" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Calls')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="Function Pointer" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FunctionPointer')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="Field Read" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="Stroke" Value="#FF00AEEF" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="Field Write" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FieldWrite')" />
+      <Setter Property="Stroke" Value="#FF00AEEF" />
+      <Setter Property="DrawArrow" Value="true" />
+      <Setter Property="IsHidden" Value="false" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="Return" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeSchema_ReturnTypeLink')" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="References" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('References')" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="Uses Attribute" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeSchema_AttributeUse')" />
+    </Style>
+    <Style TargetType="Node" IsEnabled="false" GroupLabel="Solution Folder" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeMap_SolutionFolder')" />
+      <Setter Property="Background" Value="#FFDEBA83" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Project Reference" ValueLabel="Project Reference">
+      <Condition Expression="HasCategory('CodeMap_ProjectReference')" />
+      <Setter Property="Stroke" Value="#9A9A9A" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" IsEnabled="false" GroupLabel="External Reference" ValueLabel="External Reference">
+      <Condition Expression="HasCategory('CodeMap_ExternalReference')" />
+      <Setter Property="Stroke" Value="#9A9A9A" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="183ad664-8142-45bc-9cda-1a55dd4f6bec.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.Models\bin\Debug\netstandard2.0\AER.Enigma.Models.dll" />
+    <Path Id="183ad664-8142-45bc-9cda-1a55dd4f6bec.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Models/bin/Debug/netstandard2.0/AER.Enigma.Models.dll" />
+    <Path Id="2d875e09-c589-4530-8faa-25c27efba2ed.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.Services\bin\Debug\netstandard2.0\AER.Enigma.Services.dll" />
+    <Path Id="2d875e09-c589-4530-8faa-25c27efba2ed.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Services/bin/Debug/netstandard2.0/AER.Enigma.Services.dll" />
+    <Path Id="413c78b4-57b5-4554-a897-b30642798d92.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.Services.Tests\bin\Debug\AER.Enigma.Services.Tests.dll" />
+    <Path Id="413c78b4-57b5-4554-a897-b30642798d92.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Services.Tests/bin/Debug/AER.Enigma.Services.Tests.dll" />
+    <Path Id="6e5bd7bc-daee-44ce-b309-dcd1613731ec.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.Core\bin\Debug\netstandard2.0\AER.Enigma.Core.dll" />
+    <Path Id="6e5bd7bc-daee-44ce-b309-dcd1613731ec.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Core/bin/Debug/netstandard2.0/AER.Enigma.Core.dll" />
+    <Path Id="8566b1c9-f55c-4c08-bfdf-e75d6299760b.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.Core.Tests\bin\Debug\AER.Enigma.Core.Tests.dll" />
+    <Path Id="8566b1c9-f55c-4c08-bfdf-e75d6299760b.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Core.Tests/bin/Debug/AER.Enigma.Core.Tests.dll" />
+    <Path Id="a1327745-ebc9-4c3a-bbe4-2acd21f64575.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.ViewModels\bin\Debug\netstandard2.0\AER.Enigma.ViewModels.dll" />
+    <Path Id="a1327745-ebc9-4c3a-bbe4-2acd21f64575.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.ViewModels/bin/Debug/netstandard2.0/AER.Enigma.ViewModels.dll" />
+    <Path Id="b40ded54-d16d-4a82-a559-bd9285ca2a91.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.UI.Android\bin\Debug\AER.Enigma.UI.Android.dll" />
+    <Path Id="b40ded54-d16d-4a82-a559-bd9285ca2a91.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.UI.Android/bin/Debug/AER.Enigma.UI.Android.dll" />
+    <Path Id="c3dfd195-d722-4a6b-9d80-8cd95864ab6e.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.Models.Tests\bin\Debug\AER.Enigma.Models.Tests.dll" />
+    <Path Id="c3dfd195-d722-4a6b-9d80-8cd95864ab6e.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.Models.Tests/bin/Debug/AER.Enigma.Models.Tests.dll" />
+    <Path Id="f5ceeac8-e6d8-4ccf-8af2-861a4d785bf4.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.UI\bin\Debug\netstandard2.0\AER.Enigma.UI.dll" />
+    <Path Id="f5ceeac8-e6d8-4ccf-8af2-861a4d785bf4.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.UI/bin/Debug/netstandard2.0/AER.Enigma.UI.dll" />
+    <Path Id="f91c384c-87fa-4236-ba8b-a929f5916523.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.UI.iOS\bin\iPhone\Debug\AEREnigma.UI.iOS.exe" />
+    <Path Id="f91c384c-87fa-4236-ba8b-a929f5916523.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.UI.iOS/bin/iPhone/Debug/AEREnigma.UI.iOS.exe" />
+    <Path Id="f99d8fd4-a66b-4b47-b47a-30827b013d3d.OutputPath" Value="C:\Users\joel.howard\Source\Repos\aer-enigma\AER.Enigma.UI.UWP\bin\x86\Debug\AEREnigma.UI.UWP.exe" />
+    <Path Id="f99d8fd4-a66b-4b47-b47a-30827b013d3d.OutputPathUri" Value="file:///C:/Users/joel.howard/Source/Repos/aer-enigma/AER.Enigma.UI.UWP/bin/x86/Debug/AEREnigma.UI.UWP.exe" />
+  </Paths>
+</DirectedGraph>

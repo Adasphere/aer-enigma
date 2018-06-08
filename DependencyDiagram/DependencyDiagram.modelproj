@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{898c7dbb-7e5e-41f1-9b9b-b1ae603ce63f}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>DependencyDiagram</Name>
+    <RootNamespace>DependencyDiagram</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Validate Include="DependencyValidation1.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="DependencyValidation1.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DependencyValidation1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="DependencyValidation1.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>DependencyValidation1.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AER.Enigma.Core\AER.Enigma.Core.csproj">
+      <Name>AER.Enigma.Core</Name>
+      <Project>{6e5bd7bc-daee-44ce-b309-dcd1613731ec}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.Models\AER.Enigma.Models.csproj">
+      <Name>AER.Enigma.Models</Name>
+      <Project>{183ad664-8142-45bc-9cda-1a55dd4f6bec}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.Services\AER.Enigma.Services.csproj">
+      <Name>AER.Enigma.Services</Name>
+      <Project>{2d875e09-c589-4530-8faa-25c27efba2ed}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.UI.Android\AER.Enigma.UI.Android.csproj">
+      <Name>AER.Enigma.UI.Android</Name>
+      <Project>{b40ded54-d16d-4a82-a559-bd9285ca2a91}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.UI.iOS\AEREnigma.UI.iOS.csproj">
+      <Name>AEREnigma.UI.iOS</Name>
+      <Project>{f91c384c-87fa-4236-ba8b-a929f5916523}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.UI.UWP\AER.Enigma.UI.UWP.csproj">
+      <Name>AER.Enigma.UI.UWP</Name>
+      <Project>{f99d8fd4-a66b-4b47-b47a-30827b013d3d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.UI\AER.Enigma.UI.csproj">
+      <Name>AER.Enigma.UI</Name>
+      <Project>{f5ceeac8-e6d8-4ccf-8af2-861a4d785bf4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.ViewModels\AER.Enigma.ViewModels.csproj">
+      <Name>AER.Enigma.ViewModels</Name>
+      <Project>{a1327745-ebc9-4c3a-bbe4-2acd21f64575}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CodeMap.dgml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
