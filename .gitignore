@@ -52,3 +52,13 @@
 /AER.Enigma.UI.iOS/bin
 /AER.Enigma.ViewModelLocator/bin/Debug/netstandard2.0
 /AER.Enigma.ViewModelLocator/obj
+/AER.Enigma.ViewModels/bin/Release/netstandard2.0
+/AER.Enigma.UI.UWP/bin/x86/Release
+/AER.Enigma.UI/bin/Release/netstandard2.0
+/AER.Enigma.Services.Tests/bin/Release
+/AER.Enigma.Services/bin/Release/netstandard2.0
+/AER.Enigma.Models.Tests/bin/Release
+/AER.Enigma.Models/bin/Release/netstandard2.0
+/AER.Enigma.Core.Tests/bin/Release
+/AER.Enigma.Core/bin/Release/netstandard2.0
+/AER.Enigma.UI.Android/bin/Release

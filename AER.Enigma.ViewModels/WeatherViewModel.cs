@@ -149,8 +149,6 @@ namespace AER.Enigma.UI.ViewModels
         //        protected override void OnPropertyChanged(string propertyName)
         //        {
         //            base.OnPropertyChanged(propertyName);
-
-
         //        }
 
         /// <summary>
