@@ -29,7 +29,7 @@
         <templates:LocationSearchResultsTemplate Grid.Row="2"/>
 
         <!--SUMMARY: Summary-->
-        <StackLayout Grid.Row="2" 
+        <StackLayout Grid.Row="3" 
                      VerticalOptions="Start" 
                      HorizontalOptions="CenterAndExpand"
                      Margin="20,30,20,0">
@@ -55,7 +55,7 @@
         </StackLayout>
 
         <!--SUMMARY: Details-->
-        <Grid Grid.Row="3"
+        <Grid Grid.Row="4"
               VerticalOptions="StartAndExpand"
               BackgroundColor="{StaticResource BackgroundDarkBrush}">
             <Grid.RowDefinitions>

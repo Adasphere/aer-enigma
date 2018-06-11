@@ -17,7 +17,7 @@ namespace AER.Enigma.ViewModels.Services
 
     public class NavigationService : INavigationService
     {
-        private readonly ISettingsService _settingsService;
+        private readonly ISettingsService settingsService;
 
         public ViewModelBase PreviousPageViewModel
         {
@@ -31,7 +31,7 @@ namespace AER.Enigma.ViewModels.Services
 
         public NavigationService(ISettingsService settingsService)
         {
-            _settingsService = settingsService;
+            this.settingsService = settingsService;
         }
 
         public Task InitializeAsync()

@@ -31,7 +31,7 @@ namespace AER.Enigma.UI.Services
         private readonly string IdTokenDefault = string.Empty;
         private readonly bool UseMocksDefault = true;
         private readonly bool UseFakeLocationDefault = false;
-        private readonly bool AllowGpsLocationDefault = false;
+        private readonly bool AllowGpsLocationDefault = true;
         private readonly double FakeLatitudeDefault = 47.604610d;
         private readonly double FakeLongitudeDefault = -122.315752d;
         private readonly string UrlBaseDefault = GlobalSetting.Instance.BaseEndpoint;

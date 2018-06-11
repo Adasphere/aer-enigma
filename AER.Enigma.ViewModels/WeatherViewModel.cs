@@ -32,7 +32,7 @@ namespace AER.Enigma.UI.ViewModels
 
         private ObservableCollection<Weather> weatherList;
 
-        private ObservableCollection<Location> locationList;
+        private ObservableCollection<Location> locations;
 
         public WeatherViewModel(ILocationSearchService locationSearchService, IWeatherService weatherService)
         {
@@ -60,17 +60,17 @@ namespace AER.Enigma.UI.ViewModels
             }
         }
 
-        public ObservableCollection<Location> LocationList
+        public ObservableCollection<Location> Locations
         {
             get
             {
-                return this.locationList;
+                return this.locations;
             }
 
             set
             {
-                this.locationList = value;
-                this.RaisePropertyChanged(() => this.LocationList);
+                this.locations = value;
+                this.RaisePropertyChanged(() => this.Locations);
             }
         }
 
@@ -84,7 +84,7 @@ namespace AER.Enigma.UI.ViewModels
         {
             IEnumerable<Location> list = await this.locationSearchService.SearchAsync(term);
 
-            this.LocationList = new ObservableCollection<Location>();
+            this.Locations = new ObservableCollection<Location>(list);
         }
 
         //        /// <summary>
