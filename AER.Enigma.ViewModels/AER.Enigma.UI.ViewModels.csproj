@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,6 +15,12 @@
     <ProjectReference Include="..\AER.Enigma.Models\AER.Enigma.Models.csproj" />
     <ProjectReference Include="..\AER.Enigma.Services\AER.Enigma.Services.csproj" />
     <ProjectReference Include="..\AER.Enigma.TinyIOC\AER.Enigma.TinyIoc.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\..\Users\doug.simpson.ADASPHERE\.nuget\packages\xamarin.forms\3.0.0.446417\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

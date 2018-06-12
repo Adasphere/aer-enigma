@@ -62,3 +62,6 @@
 /AER.Enigma.Core.Tests/bin/Release
 /AER.Enigma.Core/bin/Release/netstandard2.0
 /AER.Enigma.UI.Android/bin/Release
+/AER.Enigma.UI.UWP/AppPackages/AER.Enigma.UI.UWP_1.0.0.0_Debug_Test
+/AER.Enigma.UI.UWP/bin
+/AER.Enigma.UI.UWP/BundleArtifacts

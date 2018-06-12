@@ -18,6 +18,7 @@ namespace AER.Enigma.UI.ViewModels
     using AER.Enigma.Services.Location;
     using AER.Enigma.Services.Weather;
     using AER.Enigma.UI.ViewModels.Base;
+    using AER.Enigma.UI.ViewModels.Services;
 
     using Xamarin.Forms;
 
@@ -30,21 +31,40 @@ namespace AER.Enigma.UI.ViewModels
 
         private IWeatherService weatherService;
 
+        private readonly INavigationService navigationService;
+
         private ObservableCollection<Weather> weatherList;
 
         private ObservableCollection<Location> locations;
 
-        public WeatherViewModel(ILocationSearchService locationSearchService, IWeatherService weatherService)
+        private Location location;
+
+        public WeatherViewModel(ILocationSearchService locationSearchService, IWeatherService weatherService, INavigationService navigationService)
         {
             this.locationSearchService = locationSearchService;
             this.weatherService = weatherService;
+            this.navigationService = navigationService;
         }
 
         public ICommand SearchLocationCommand => new Command<string>(async (t) => await this.SearchLocation(t));
 
         public ICommand LocationSelectedCommand => new Command<Location>(async (l) => await this.LocationSelectedAsync(l));
 
+        public ICommand ShowAlertCommand => new Command(async () => await this.ShowAlert());
 
+        public Location Location
+        {
+            get
+            {
+                return this.location;
+            }
+
+            set
+            {
+                this.location = value;
+                this.RaisePropertyChanged(() => this.Location);
+            }
+        }
 
         public ObservableCollection<Weather> WeatherList
         {
@@ -76,6 +96,7 @@ namespace AER.Enigma.UI.ViewModels
 
         private async Task LocationSelectedAsync(Location location)
         {
+            this.Location = location;
             List<Weather> list = await this.GetWeatherAsync(location);
             this.WeatherList = new ObservableCollection<Weather>(list);
         }
@@ -85,6 +106,11 @@ namespace AER.Enigma.UI.ViewModels
             IEnumerable<Location> list = await this.locationSearchService.SearchAsync(term);
 
             this.Locations = new ObservableCollection<Location>(list);
+        }
+
+        private async Task ShowAlert()
+        {
+            this.navigationService.NavigateToAsync<AlertViewModel>(this.Location);
         }
 
         //        /// <summary>

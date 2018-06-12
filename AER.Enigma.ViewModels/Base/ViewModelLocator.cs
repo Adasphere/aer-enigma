@@ -5,6 +5,7 @@
     using System.Reflection;
 
     using AER.Enigma.Services;
+    using AER.Enigma.Services.Alerts;
     using AER.Enigma.Services.Location;
     using AER.Enigma.Services.Weather;
     using AER.Enigma.TinyIoC;
@@ -37,6 +38,7 @@
             // View models - by default, TinyIoC will register concrete classes as multi-instance.
             container.Register<LocationSearchViewModel>();
             container.Register<WeatherViewModel>();
+            container.Register<AlertViewModel>();
 
             // Services - by default, TinyIoC will register interface registrations as singletons.
             container.Register<IWeatherService, WeatherService>();
@@ -53,6 +55,7 @@
             //container.Register<IOrderService, OrderMockService>();
             //container.Register<IUserService, UserMockService>();
             //container.Register<ICampaignService, CampaignMockService>();
+            container.Register<IAlertService, AlertMockService>();
         }
 
         public static void RegisterUIServices<RegisterType, RegisterImplementation>()
@@ -69,6 +72,7 @@
             {
                 container.Register<ILocationSearchService, LocationSearchMockService>();
                 container.Register<IWeatherService, WeatherMockService>();
+                container.Register<IAlertService, AlertMockService>();
                 //container.Register<ICatalogService, CatalogMockService>();
                 //container.Register<IBasketService, BasketMockService>();
                 //container.Register<IOrderService, OrderMockService>();
@@ -86,6 +90,7 @@
                 //container.Register<IOrderService, OrderService>();
                 //container.Register<IUserService, UserService>();
                 //container.Register<ICampaignService, CampaignService>();
+                container.Register<IAlertService, AlertMockService>();
 
                 UseMockService = false;
             }
