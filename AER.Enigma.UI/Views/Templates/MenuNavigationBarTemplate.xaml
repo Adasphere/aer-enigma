@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AER.Enigma.UI.Views.Templates.MenuNavigationBarTemplate">
+  <ContentView.Content>
+      <Grid 
+            Padding="10" 
+            VerticalOptions="StartAndExpand"
+            BackgroundColor="{StaticResource BackgroundMenuBarBrush}">
+          <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          <StackLayout Grid.Column="0" 
+                       HeightRequest="15" 
+                       WidthRequest="15"
+                       VerticalOptions="Center">
+              <Image Source="Images/BackArrow.png" 
+                     Aspect="AspectFit" 
+                     VerticalOptions="CenterAndExpand"/>
+          </StackLayout>
+          <Label Grid.Column="1" 
+                 Text="AER-Enigma"
+                 Style="{StaticResource MenuLabelStyle}"/>
+          <StackLayout Grid.Column="2" 
+                       HeightRequest="20" 
+                       WidthRequest="20"
+                       VerticalOptions="Center">
+              <Image Source="Images/Menu.png"
+                     Aspect="AspectFit" 
+                     VerticalOptions="CenterAndExpand"/>
+          </StackLayout>
+      </Grid>
+  </ContentView.Content>
+</ContentView>

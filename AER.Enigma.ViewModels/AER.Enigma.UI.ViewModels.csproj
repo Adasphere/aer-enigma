@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>AER.Enigma.UI.ViewModels</AssemblyName>
+    <RootNamespace>AER.Enigma.UI.ViewModels</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AER.Enigma.Core\AER.Enigma.Core.csproj" />
+    <ProjectReference Include="..\AER.Enigma.Models\AER.Enigma.Models.csproj" />
+    <ProjectReference Include="..\AER.Enigma.Services\AER.Enigma.Services.csproj" />
+    <ProjectReference Include="..\AER.Enigma.TinyIOC\AER.Enigma.TinyIoc.csproj" />
+  </ItemGroup>
+
+</Project>

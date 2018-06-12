@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>AER.Enigma.UI</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Adasphere.AER.Enigma.UI</string>
+	<string>com.adasphere.AER.Enigma.UI</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
@@ -34,5 +34,17 @@
 	<string>AER.Enigma.UI</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>Need location for geolocator plugin.</string>
+ 
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>Need location for geolocator plugin.</string>
+ 
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>Need location for geolocator plugin.</string>
 </dict>
 </plist>

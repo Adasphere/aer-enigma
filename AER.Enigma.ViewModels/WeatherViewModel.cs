@@ -7,86 +7,149 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace AER.Enigma.ViewModels
+namespace AER.Enigma.UI.ViewModels
 {
-    using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     using System.Threading.Tasks;
+    using System.Windows.Input;
 
-    using AER.Enigma.Models;
-    using AER.Enigma.Services;
-    using AER.Enigma.Services.Design;
+    using AER.Enigma.Models.Business;
+    using AER.Enigma.Services.Location;
+    using AER.Enigma.Services.Weather;
+    using AER.Enigma.UI.ViewModels.Base;
+
+    using Xamarin.Forms;
 
     /// <summary>
     /// The weather view model.
     /// </summary>
-    public class WeatherViewModel : AdaViewModelBase<List<Weather>>
+    public class WeatherViewModel : ViewModelBase
     {
-        /// <summary>
-        /// Stores the weather service.
-        /// </summary>
-        private readonly IWeatherService weatherService;
+        private ILocationSearchService locationSearchService;
 
-        //private readonly Location location;
+        private IWeatherService weatherService;
 
-        /// <summary>
-        /// Stores the humidity
-        /// </summary>
-        private double humidity;
+        private ObservableCollection<Weather> weatherList;
 
-        /// <summary>
-        /// Stores the temperature
-        /// </summary>
-        private double temperature;
+        private ObservableCollection<Location> locations;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WeatherViewModel"/> class.
-        /// </summary>
-        /// <param name="weatherService">
-        /// The weather service.
-        /// </param>
-        public WeatherViewModel(IWeatherService weatherService, Location location) : base(location)
+        public WeatherViewModel(ILocationSearchService locationSearchService, IWeatherService weatherService)
         {
+            this.locationSearchService = locationSearchService;
             this.weatherService = weatherService;
-            //this.location = location;
         }
 
-#if DEBUG
-        public WeatherViewModel()
-        {
-            if (IsInDesignMode)
-            {
-                Location location = new Location() { ZipCode = 22903 };
-                IWeatherService service = new DesignWeatherService();
-                this.Model = new List<Weather> { service.GetWeather(location) };
-            }
-        }
-#endif
+        public ICommand SearchLocationCommand => new Command<string>(async (t) => await this.SearchLocation(t));
 
-        /// <summary>
-        /// The base initialization method
-        /// </summary>
-        /// <param name="initData">
-        /// Location initialization data
-        /// </param>
-        protected override async Task Initialize(object initData)
-        {
-            Location location = (Location)initData;
+        public ICommand LocationSelectedCommand => new Command<Location>(async (l) => await this.LocationSelectedAsync(l));
 
-            if (location == null)
+
+
+        public ObservableCollection<Weather> WeatherList
+        {
+            get
             {
-                throw new ArgumentException($"Expecting a {typeof(Location).FullName} object");
+                return this.weatherList;
             }
 
-            this.Model = await this.GetWeatherAsync(location);
+            private set
+            {
+                this.weatherList = value;
+                this.RaisePropertyChanged(() => this.WeatherList);
+            }
         }
 
-        protected override void OnPropertyChanged(string propertyName)
+        public ObservableCollection<Location> Locations
         {
-            base.OnPropertyChanged(propertyName);
+            get
+            {
+                return this.locations;
+            }
 
-
+            set
+            {
+                this.locations = value;
+                this.RaisePropertyChanged(() => this.Locations);
+            }
         }
+
+        private async Task LocationSelectedAsync(Location location)
+        {
+            List<Weather> list = await this.GetWeatherAsync(location);
+            this.WeatherList = new ObservableCollection<Weather>(list);
+        }
+
+        private async Task SearchLocation(string term)
+        {
+            IEnumerable<Location> list = await this.locationSearchService.SearchAsync(term);
+
+            this.Locations = new ObservableCollection<Location>(list);
+        }
+
+        //        /// <summary>
+        //        /// Stores the weather service.
+        //        /// </summary>
+        //        private readonly IWeatherService weatherService;
+
+        //        //private readonly Location location;
+
+        //        /// <summary>
+        //        /// Stores the humidity
+        //        /// </summary>
+        //        private double humidity;
+
+        //        /// <summary>
+        //        /// Stores the temperature
+        //        /// </summary>
+        //        private double temperature;
+
+        //        /// <summary>
+        //        /// Initializes a new instance of the <see cref="WeatherViewModel"/> class.
+        //        /// </summary>
+        //        /// <param name="weatherService">
+        //        /// The weather service.
+        //        /// </param>
+        //        public WeatherViewModel(IWeatherService weatherService, Location location) : base(location)
+        //        {
+        //            this.weatherService = weatherService;
+        //            //this.location = location;
+        //        }
+
+        //#if DEBUG
+        //        public WeatherViewModel()
+        //        {
+        //            if (IsInDesignMode)
+        //            {
+        //                Location location = new Location() { ZipCode = 22903 };
+        //                IWeatherService service = new DesignWeatherService();
+        //                this.Model = new List<Weather> { service.GetWeather(location) };
+        //            }
+        //        }
+        //#endif
+
+        //        /// <summary>
+        //        /// The base initialization method
+        //        /// </summary>
+        //        /// <param name="initData">
+        //        /// Location initialization data
+        //        /// </param>
+        //        protected override async Task Initialize(object initData)
+        //        {
+        //            Location location = (Location)initData;
+
+        //            if (location == null)
+        //            {
+        //                throw new ArgumentException($"Expecting a {typeof(Location).FullName} object");
+        //            }
+
+        //            this.Model = await this.GetWeatherAsync(location);
+        //        }
+
+        //        protected override void OnPropertyChanged(string propertyName)
+        //        {
+        //            base.OnPropertyChanged(propertyName);
+        //        }
 
         /// <summary>
         /// Gets the weather asynchronously
@@ -99,7 +162,7 @@ namespace AER.Enigma.ViewModels
         /// </returns>
         private async Task<List<Weather>> GetWeatherAsync(Location location)
         {
-            Task<List<Weather>> task  = this.weatherService.GetWeatherAsync(location);
+            Task<List<Weather>> task = this.weatherService.GetWeatherAsync(location);
 
             return await task;
         }

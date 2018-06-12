@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:AER.Enigma.UI.Views.Templates;assembly=AER.Enigma.UI"
+             x:Class="AER.Enigma.UI.Views.SearchView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackLayout>
+            <SearchBar x:Name="SearchBar" Placeholder="Search location" Text="{Binding SearchText}" SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding Source={x:Reference SearchBar}, Path=Text}"></SearchBar>
+        </StackLayout>
+
+        <ListView x:Name="Results" Grid.Row="1" ItemsSource="{Binding Locations}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <templates:LocationSearchResultTemplate/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
