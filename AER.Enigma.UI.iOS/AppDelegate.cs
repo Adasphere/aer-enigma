@@ -7,6 +7,8 @@ using UIKit;
 
 namespace AER.Enigma.UI.iOS
 {
+    using System.IO;
+
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
@@ -23,9 +25,27 @@ namespace AER.Enigma.UI.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+
+            App aerapp = new App();
+            aerapp.DatabaseService.DbPath = this.GetDbPath("aer-enigma.db");
+            aerapp.DatabaseService.Platform = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
+
+            LoadApplication(aerapp);
 
             return base.FinishedLaunching(app, options);
+        }
+
+        private string GetDbPath(string fileName)
+        {
+            string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
+
+            if (!Directory.Exists(libFolder))
+            {
+                Directory.CreateDirectory(libFolder);
+            }
+
+            return Path.Combine(libFolder, fileName);
         }
     }
 }

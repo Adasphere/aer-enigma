@@ -11,6 +11,7 @@ namespace AER.Enigma.UI
     using System.Threading.Tasks;
 
     using AER.Enigma.Models.Business;
+    using AER.Enigma.Services.Database;
     using AER.Enigma.Services.Location;
     using AER.Enigma.UI.Services;
     using AER.Enigma.UI.ViewModels.Base;
@@ -42,9 +43,13 @@ namespace AER.Enigma.UI
             }
         }
 
+        public IDatabaseService DatabaseService { get; private set; }
+
         private void InitApp()
         {
             this.settingsService = ViewModelLocator.Resolve<ISettingsService>();
+            this.DatabaseService = ViewModelLocator.Resolve<IDatabaseService>();
+
             if (!this.settingsService.UseMocks)
                 ViewModelLocator.UpdateDependencies(this.settingsService.UseMocks);
         }

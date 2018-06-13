@@ -6,6 +6,7 @@
 
     using AER.Enigma.Services;
     using AER.Enigma.Services.Alerts;
+    using AER.Enigma.Services.Database;
     using AER.Enigma.Services.Location;
     using AER.Enigma.Services.Weather;
     using AER.Enigma.TinyIoC;
@@ -56,6 +57,7 @@
             //container.Register<IUserService, UserMockService>();
             //container.Register<ICampaignService, CampaignMockService>();
             container.Register<IAlertService, AlertMockService>();
+            container.Register<IDatabaseService, DatabaseService>();
         }
 
         public static void RegisterUIServices<RegisterType, RegisterImplementation>()
@@ -78,6 +80,7 @@
                 //container.Register<IOrderService, OrderMockService>();
                 //container.Register<IUserService, UserMockService>();
                 //container.Register<ICampaignService, CampaignMockService>();
+                container.Register<IDatabaseService, DatabaseService>();
 
                 UseMockService = true;
             }
@@ -91,6 +94,7 @@
                 //container.Register<IUserService, UserService>();
                 //container.Register<ICampaignService, CampaignService>();
                 container.Register<IAlertService, AlertMockService>();
+                container.Register<IDatabaseService, DatabaseService>();
 
                 UseMockService = false;
             }
