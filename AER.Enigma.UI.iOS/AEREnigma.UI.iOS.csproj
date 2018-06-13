@@ -157,7 +157,7 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AER.Enigma.Models\AER.Enigma.Models.csproj">
