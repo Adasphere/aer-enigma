@@ -12,6 +12,7 @@ namespace AER.Enigma.UI
 
     using AER.Enigma.Models.Business;
     using AER.Enigma.Services.Database;
+    using AER.Enigma.Services.Files;
     using AER.Enigma.Services.Location;
     using AER.Enigma.UI.Services;
     using AER.Enigma.UI.ViewModels.Base;
@@ -49,6 +50,11 @@ namespace AER.Enigma.UI
         {
             this.settingsService = ViewModelLocator.Resolve<ISettingsService>();
             this.DatabaseService = ViewModelLocator.Resolve<IDatabaseService>();
+
+            IDependencyService dependencyService = ViewModelLocator.Resolve<IDependencyService>();
+            string dbPath = dependencyService.Get<ILocalFileHelper>().GetLocalFilePath("aerenigma.db3");
+            this.DatabaseService.InitializeAsync(dbPath);
+
 
             if (!this.settingsService.UseMocks)
                 ViewModelLocator.UpdateDependencies(this.settingsService.UseMocks);
@@ -90,24 +96,31 @@ namespace AER.Enigma.UI
             var dependencyService = ViewModelLocator.Resolve<IDependencyService>();
             var locator = dependencyService.Get<ILocationServiceImplementation>();
 
-            if (locator.IsGeolocationEnabled && locator.IsGeolocationAvailable)
+            if (locator != null)
             {
-                locator.DesiredAccuracy = 50;
+                if (locator.IsGeolocationEnabled && locator.IsGeolocationAvailable)
+                {
+                    locator.DesiredAccuracy = 50;
 
-                try
-                {
-                    var position = await locator.GetPositionAsync();
-                    this.settingsService.Latitude = position.Latitude.ToString();
-                    this.settingsService.Longitude = position.Longitude.ToString();
+                    try
+                    {
+                        var position = await locator.GetPositionAsync();
+                        this.settingsService.Latitude = position.Latitude.ToString();
+                        this.settingsService.Longitude = position.Longitude.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine(ex);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    Debug.WriteLine(ex);
+                    this.settingsService.AllowGpsLocation = false;
                 }
             }
             else
-            {
-                this.settingsService.AllowGpsLocation = false;
+            {;
+                Debug.WriteLine("AER.Enigma.UI.App - Location service is not implemented on this platform.");
             }
         }
 

@@ -1,0 +1,12 @@
+﻿Restoring packages for C:\repos.doug.simpson\aer-enigma\AER.Enigma.UI.iOS\AEREnigma.UI.iOS.csproj...
+Committing restore...
+Writing lock file to disk. Path: C:\repos.doug.simpson\aer-enigma\AER.Enigma.UI.iOS\obj\project.assets.json
+Restore completed in 63.6 ms for C:\repos.doug.simpson\aer-enigma\AER.Enigma.UI.iOS\AEREnigma.UI.iOS.csproj.
+Successfully installed 'sqlite-net-pcl 1.4.118' to AEREnigma.UI.iOS
+Successfully installed 'SQLitePCLRaw.bundle_green 1.1.5' to AEREnigma.UI.iOS
+Successfully installed 'SQLitePCLRaw.core 1.1.5' to AEREnigma.UI.iOS
+Successfully installed 'SQLitePCLRaw.provider.sqlite3.ios_unified 1.1.5' to AEREnigma.UI.iOS
+Executing nuget actions took 1.65 sec
+Time Elapsed: 00:00:01.9811958
+========== Finished ==========
+

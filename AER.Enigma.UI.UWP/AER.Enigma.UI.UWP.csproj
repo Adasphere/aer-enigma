@@ -7,8 +7,8 @@
     <ProjectGuid>{F99D8FD4-A66B-4B47-B47A-30827B013D3D}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AEREnigma.UI.UWP</RootNamespace>
-    <AssemblyName>AEREnigma.UI.UWP</AssemblyName>
+    <RootNamespace>AER.Enigma.UI.UWP</RootNamespace>
+    <AssemblyName>AER.Enigma.UI.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
@@ -99,6 +99,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocalFileHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -156,6 +157,10 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AER.Enigma.Services\AER.Enigma.Services.csproj">
+      <Project>{2D875E09-C589-4530-8FAA-25C27EFBA2ED}</Project>
+      <Name>AER.Enigma.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AER.Enigma.UI\AER.Enigma.UI.csproj">
       <Project>{f5ceeac8-e6d8-4ccf-8af2-861a4d785bf4}</Project>
       <Name>AER.Enigma.UI</Name>

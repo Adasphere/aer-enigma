@@ -7,11 +7,11 @@
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="3.6.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="SQLite.Net.Standard" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AER.Enigma.Core\AER.Enigma.Core.csproj" />
+    <ProjectReference Include="..\AER.Enigma.Data\AER.Enigma.Data.csproj" />
     <ProjectReference Include="..\AER.Enigma.Models\AER.Enigma.Models.csproj" />
   </ItemGroup>
 
