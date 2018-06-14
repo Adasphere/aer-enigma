@@ -1,5 +1,6 @@
 ﻿namespace AER.Enigma.UI.ViewModels
 {
+    using System.Diagnostics;
     using System.Globalization;
     using System.Threading.Tasks;
     using System.Windows.Input;
@@ -346,15 +347,24 @@
             if (this._allowGpsLocation)
             {
                 var locator = this._dependencyService.Get<ILocationServiceImplementation>();
-                if (!locator.IsGeolocationEnabled)
+
+                if (locator != null)
                 {
-                    this._allowGpsLocation = false;
-                    this.GpsWarningMessage = "Enable the GPS sensor on your device";
+                    if (!locator.IsGeolocationEnabled)
+                    {
+                        this._allowGpsLocation = false;
+                        this.GpsWarningMessage = "Enable the GPS sensor on your device";
+                    }
+                    else
+                    {
+                        this._settingsService.AllowGpsLocation = this._allowGpsLocation;
+                        this.GpsWarningMessage = string.Empty;
+                    }
+
                 }
                 else
                 {
-                    this._settingsService.AllowGpsLocation = this._allowGpsLocation;
-                    this.GpsWarningMessage = string.Empty;
+                    Debug.WriteLine("AER.Enigma.UI.ViewModels.SettingsViewModel - Location service is not implemented on this platform.");
                 }
             }
             else
