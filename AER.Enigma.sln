@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AER.Enigma.UI", "AER.Enigma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AER.Enigma.UI.Android", "AER.Enigma.UI.Android\AER.Enigma.UI.Android.csproj", "{B40DED54-D16D-4A82-A559-BD9285CA2A91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEREnigma.UI.iOS", "AER.Enigma.UI.iOS\AEREnigma.UI.iOS.csproj", "{F91C384C-87FA-4236-BA8B-A929F5916523}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AER.Enigma.UI.iOS", "AER.Enigma.UI.iOS\AER.Enigma.UI.iOS.csproj", "{F91C384C-87FA-4236-BA8B-A929F5916523}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AER.Enigma.UI.UWP", "AER.Enigma.UI.UWP\AER.Enigma.UI.UWP.csproj", "{F99D8FD4-A66B-4B47-B47A-30827B013D3D}"
 EndProject
@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IOC", "IOC", "{3BB12B0E-C86
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AER.Enigma.TinyIoc", "AER.Enigma.TinyIOC\AER.Enigma.TinyIoc.csproj", "{544890CD-26D5-4E0E-955E-AA7F95A7C13A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AER.Enigma.Data", "AER.Enigma.Data\AER.Enigma.Data.csproj", "{DB76A319-160C-4668-87B9-C88289C5223D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AER.Enigma.Data", "AER.Enigma.Data\AER.Enigma.Data.csproj", "{DB76A319-160C-4668-87B9-C88289C5223D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
