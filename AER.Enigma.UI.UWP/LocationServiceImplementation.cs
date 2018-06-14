@@ -1,54 +1,21 @@
-﻿using Xamarin.Forms;
-using AER.Enigma.UI.Droid;
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+using Windows.Devices.Geolocation;
+using Windows.Foundation;
+using AER.Enigma.UI.UWP;
+using AER.Enigma.Services.Location;
+using AER.Enigma.Models.Business;
+using Xamarin.Essentials;
 
-[assembly: Dependency(typeof(LocationServiceImplementation))]
-namespace AER.Enigma.UI.Droid
+[assembly: Xamarin.Forms.Dependency(typeof(LocationServiceImplementation))]
+namespace AER.Enigma.UI.UWP
 {
-    using AER.Enigma.Models.Business;
-    using AER.Enigma.Services.Location;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Android.App;
-    using Android.Content;
-    using Android.Locations;
-    using System;
-    using System.Linq;
-    using Xamarin.Essentials;
-
     public class LocationServiceImplementation : ILocationServiceImplementation
     {
         public double DesiredAccuracy { get; set; }
-
-        //LocationManager _locationManager;
         public bool IsGeolocationAvailable => true;
-
-        //string[] Providers => Manager.GetProviders(enabledOnly: false).ToArray();
-
-        //string[] IgnoredProviders => new string[] { LocationManager.PassiveProvider, "local_database" };
-
-        //LocationManager Manager
-        //{
-        //    get
-        //    {
-        //        if (_locationManager == null)
-        //            _locationManager = (LocationManager)Application.Context.GetSystemService(Context.LocationService);
-        //        return _locationManager;
-        //    }
-        //}
-
-
-        //public bool IsGeolocationEnabled
-        //{
-        //    get
-        //    {
-        //        string[] providers = this.Providers;
-
-        //        return providers.Any(p => !IgnoredProviders.Contains(p) && Manager.IsProviderEnabled(p));
-        //    }
-
-        //}
         public bool IsGeolocationEnabled => true;
-
 
         public async Task<Position> GetPositionAsync(TimeSpan? timeout = null, CancellationToken? token = null)
         {
@@ -56,7 +23,6 @@ namespace AER.Enigma.UI.Droid
             {
                 GeolocationAccuracy accuracy = this.GetAccuracy();
                 var request = timeout.HasValue ? new GeolocationRequest(accuracy, timeout.Value) : new GeolocationRequest(accuracy);
-
                 var location = await Geolocation.GetLocationAsync(request);
 
                 if (location != null)
@@ -85,17 +51,23 @@ namespace AER.Enigma.UI.Droid
 
         private GeolocationAccuracy GetAccuracy()
         {
-            if (this.DesiredAccuracy >= 500)
+            if (this.DesiredAccuracy >= 1000)
+            {
+                return GeolocationAccuracy.Lowest;
+            }
+
+            if (this.DesiredAccuracy >= 300 && this.DesiredAccuracy < 1000)
             {
                 return GeolocationAccuracy.Low;
             }
 
-            if (this.DesiredAccuracy >= 100 && this.DesiredAccuracy < 500)
+            if (this.DesiredAccuracy >= 30 && this.DesiredAccuracy < 300)
             {
                 return GeolocationAccuracy.Medium;
             }
 
             return GeolocationAccuracy.Best;
         }
+
     }
 }

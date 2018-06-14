@@ -105,8 +105,11 @@ namespace AER.Enigma.UI
                     try
                     {
                         var position = await locator.GetPositionAsync();
-                        this.settingsService.Latitude = position.Latitude.ToString();
-                        this.settingsService.Longitude = position.Longitude.ToString();
+                        if (position != null)
+                        {
+                            this.settingsService.Latitude = position.Latitude.ToString();
+                            this.settingsService.Longitude = position.Longitude.ToString();
+                        }
                     }
                     catch (Exception ex)
                     {
