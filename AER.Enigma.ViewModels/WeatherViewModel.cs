@@ -98,15 +98,18 @@ namespace AER.Enigma.UI.ViewModels
             }
         }
 
-        public override Task InitializeAsync(object navigationData)
+        public override async Task InitializeAsync(object navigationData)
         {
-            List<Weather> list = this.databaseService.RetrieveWeather();
-            if (list != null)
+            if (this.databaseService != null)
             {
-                this.WeatherList = new ObservableCollection<Weather>(list);
+                List<Weather> list = await this.databaseService.RetrieveWeatherAsync();
+                if (list != null)
+                {
+                    this.WeatherList = new ObservableCollection<Weather>(list);
+                }
             }
 
-            return base.InitializeAsync(navigationData);
+            await base.InitializeAsync(navigationData);
         }
 
         private async Task LocationSelectedAsync(Location location)
@@ -114,7 +117,11 @@ namespace AER.Enigma.UI.ViewModels
             this.Location = location;
             List<Weather> list = await this.GetWeatherAsync(location);
             this.WeatherList = new ObservableCollection<Weather>(list);
-            this.databaseService.UpdateWeather(list);
+
+            if (this.databaseService != null)
+            {
+                await this.databaseService.UpdateWeatherAsync(list);
+            }
         }
 
         private async Task SearchLocation(string term)

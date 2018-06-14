@@ -27,8 +27,6 @@ namespace AER.Enigma.UI.iOS
             global::Xamarin.Forms.Forms.Init();
 
             App aerapp = new App();
-            aerapp.DatabaseService.DbPath = this.GetDbPath("aer-enigma.db");
-            aerapp.DatabaseService.Platform = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
 
             LoadApplication(aerapp);
 

@@ -12,6 +12,7 @@ namespace AER.Enigma.UI
 
     using AER.Enigma.Models.Business;
     using AER.Enigma.Services.Database;
+    using AER.Enigma.Services.Files;
     using AER.Enigma.Services.Location;
     using AER.Enigma.UI.Services;
     using AER.Enigma.UI.ViewModels.Base;
@@ -49,6 +50,11 @@ namespace AER.Enigma.UI
         {
             this.settingsService = ViewModelLocator.Resolve<ISettingsService>();
             this.DatabaseService = ViewModelLocator.Resolve<IDatabaseService>();
+
+            IDependencyService dependencyService = ViewModelLocator.Resolve<IDependencyService>();
+            string dbPath = dependencyService.Get<ILocalFileHelper>().GetLocalFilePath("aerenigma.db3");
+            this.DatabaseService.InitializeAsync(dbPath);
+
 
             if (!this.settingsService.UseMocks)
                 ViewModelLocator.UpdateDependencies(this.settingsService.UseMocks);

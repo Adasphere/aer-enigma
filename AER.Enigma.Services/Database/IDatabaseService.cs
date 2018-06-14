@@ -1,22 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SQLite.Net.Interop;
 
 namespace AER.Enigma.Services.Database
 {
     using AER.Enigma.Models.Business;
-
-    using SQLite.Net;
+    using System.Threading.Tasks;
 
     public interface IDatabaseService
     {
-        string DbPath { get; set; }
+        Task InitializeAsync(string dbPath);
 
-        ISQLitePlatform Platform { get; set; }
+        Task<List<Weather>> RetrieveWeatherAsync();
 
-        List<Weather> RetrieveWeather();
-
-        void UpdateWeather(List<Weather> list);
+        Task UpdateWeatherAsync(List<Weather> list);
     }
 }
