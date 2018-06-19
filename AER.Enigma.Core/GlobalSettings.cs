@@ -1,72 +1,142 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="GlobalSettings.cs"  company="Adasphere Incorporated">
+//   Copyright (c) 2018 Adasphere Incorporated. All rights reserved.
+// </copyright>
+// <summary>
+//   
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AER.Enigma.Core
 {
-    public class GlobalSetting
+    /// <summary>
+    /// 
+    /// </summary>
+    public class GlobalSettings
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public const string AzureTag = "Azure";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string MockTag = "Mock";
-        public const string DefaultEndpoint = "http://YOUR_IP_OR_DNS_NAME"; // i.e.: "http://YOUR_IP" or "http://YOUR_DNS_NAME"
 
-        private string _baseEndpoint;
-        private static readonly GlobalSetting _instance = new GlobalSetting();
+        /// <summary>
+        /// 
+        /// i.e.: "http://YOUR_IP" or "http://YOUR_DNS_NAME"
+        /// </summary>
+        public const string DefaultEndpoint = "http://YOUR_IP_OR_DNS_NAME";
 
-        public GlobalSetting()
+        /// <summary>
+        /// hello world
+        /// </summary>
+        private static readonly GlobalSettings instance = new GlobalSettings();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string baseEndpoint;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public GlobalSettings()
         {
             AuthToken = "INSERT AUTHENTICATION TOKEN";
             BaseEndpoint = DefaultEndpoint;
         }
 
-        public static GlobalSetting Instance
-        {
-            get { return _instance; }
-        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GlobalSettings Instance => instance;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string BaseEndpoint
         {
-            get { return _baseEndpoint; }
+            get => this.baseEndpoint;
+
             set
             {
-                _baseEndpoint = value;
-                UpdateEndpoint(_baseEndpoint);
+                this.baseEndpoint = value;
+                this.UpdateEndpoint(this.baseEndpoint);
             }
         }
 
-        public string ClientId { get { return "xamarin"; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ClientId => "xamarin";
 
-        public string ClientSecret { get { return "secret"; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ClientSecret => "secret";
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string AuthToken { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string RegisterWebsite { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string IdentityEndpoint { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string UserInfoEndpoint { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string TokenEndpoint { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string LogoutEndpoint { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string IdentityCallback { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string LogoutCallback { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="baseEndpoint">
+        /// 
+        /// </param>
         private void UpdateEndpoint(string baseEndpoint)
         {
             var identityBaseEndpoint = $"{baseEndpoint}/identity";
-            RegisterWebsite = $"{identityBaseEndpoint}/Account/Register";
-            LogoutCallback = $"{identityBaseEndpoint}/Account/Redirecting";
+            this.RegisterWebsite = $"{identityBaseEndpoint}/Account/Register";
+            this.LogoutCallback = $"{identityBaseEndpoint}/Account/Redirecting";
 
             var connectBaseEndpoint = $"{identityBaseEndpoint}/connect";
-            IdentityEndpoint = $"{connectBaseEndpoint}/authorize";
-            UserInfoEndpoint = $"{connectBaseEndpoint}/userinfo";
-            TokenEndpoint = $"{connectBaseEndpoint}/token";
-            LogoutEndpoint = $"{connectBaseEndpoint}/endsession";
+            this.IdentityEndpoint = $"{connectBaseEndpoint}/authorize";
+            this.UserInfoEndpoint = $"{connectBaseEndpoint}/userinfo";
+            this.TokenEndpoint = $"{connectBaseEndpoint}/token";
+            this.LogoutEndpoint = $"{connectBaseEndpoint}/endsession";
 
-            IdentityCallback = $"{baseEndpoint}/xamarincallback";
+            this.IdentityCallback = $"{baseEndpoint}/xamarincallback";
         }
     }
 }

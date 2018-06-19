@@ -32,7 +32,7 @@
         {
             this.DialogService = ViewModelLocator.Resolve<IDialogService>();
             this.NavigationService = ViewModelLocator.Resolve<INavigationService>();
-            GlobalSetting.Instance.BaseEndpoint = ViewModelLocator.Resolve<ISettingsService>().UrlBase;
+            GlobalSettings.Instance.BaseEndpoint = ViewModelLocator.Resolve<ISettingsService>().UrlBase;
         }
 
         public bool IsDesignMode => Application.Current == null;

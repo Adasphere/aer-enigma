@@ -322,7 +322,7 @@
         private void UpdateEndpoint()
         {
             // Update remote endpoint (save to local storage)
-            GlobalSetting.Instance.BaseEndpoint = this._settingsService.UrlBase = this._endpoint;
+            GlobalSettings.Instance.BaseEndpoint = this._settingsService.UrlBase = this._endpoint;
         }
 
         private void UpdateFakeLocation()

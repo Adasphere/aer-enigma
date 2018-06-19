@@ -34,7 +34,7 @@ namespace AER.Enigma.UI.Services
         private readonly bool AllowGpsLocationDefault = true;
         private readonly double FakeLatitudeDefault = 47.604610d;
         private readonly double FakeLongitudeDefault = -122.315752d;
-        private readonly string UrlBaseDefault = GlobalSetting.Instance.BaseEndpoint;
+        private readonly string UrlBaseDefault = GlobalSettings.Instance.BaseEndpoint;
         private readonly bool UseMetricDefault = false;
         private readonly double ToleranceDefault = 10;
 

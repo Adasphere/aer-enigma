@@ -21,7 +21,7 @@ namespace AER.Enigma.Services.Location
 
         public async Task UpdateUserLocation(Location location, string token)
         {
-            UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BaseEndpoint);
+            UriBuilder builder = new UriBuilder(GlobalSettings.Instance.BaseEndpoint);
             builder.Path = "/mobilemarketingapigw/api/v1/l/locations";
             string uri = builder.ToString();
             await _requestProvider.PostAsync(uri, location, token);
