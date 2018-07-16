@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:AER.Enigma.UI.Views.Templates;assembly=AER.Enigma.UI"
+             x:Class="AER.Enigma.UI.Views.Templates.WeatherBreakdownTemplate">
+    <ContentView.Content>
+        <StackLayout>
+            <templates:BreakdownRangeTemplate/>
+            <templates:BreakdownRangeTemplate/>
+            <templates:BreakdownRangeTemplate/>
+        </StackLayout><!--TODO: These mock sections need to be turned into a resuable ListView item template which is commented out below.  [VB]-->
+            <!--<ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <templates:BreakdownRangeTemplate/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+    </ContentView.Content>
+</ContentView>

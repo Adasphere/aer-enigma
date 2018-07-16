@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AER.Enigma.UI.Views.Templates.WeatherDetailsTemplate">
+    <ContentView.Content>
+        <Grid VerticalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--SUMMARY: Chart-->
+            <Label Grid.Row="0"
+                   Text="Weather chart here"
+                   TextColor="{StaticResource DarkTextBrush}"
+                   FontSize="16" 
+                   HorizontalTextAlignment="Center"
+                   Margin="20"/>
+
+            <!--SUMMARY: Border line-->
+            <StackLayout Grid.Row="1"
+                         Style="{StaticResource HorizontalBorder}"/>
+
+            <!--SUMMARY: Details-->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Column="0" 
+                             Grid.Row="0"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="HIGH TEMPERATURE"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Temperature}"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="°F"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/><!--TODO: Add metric/imperial bool bindings. [VB]-->
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" 
+                             Grid.Row="0"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="LOW TEMPERATURE"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="60"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="°F"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/><!--TODO: Add metric/imperial bool bindings. [VB]-->
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" 
+                             Grid.Row="1"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="PRECIPTITAION"
+                               Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                        <Label Text="(Rain)"
+                               Style="{StaticResource HourlyDetailsLabelStyle}"/><!--TODO: Add rain/snow bindings. [VB]-->
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="24"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="in"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/><!--TODO: Add metric/imperial bool bindings. [VB]-->
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" 
+                             Grid.Row="1"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="PRESSURE"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="30.23"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="in"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/><!--TODO: Add metric/imperial bool bindings. [VB]-->
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" 
+                             Grid.Row="2"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="HUMIDITY"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="65"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="%"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" 
+                             Grid.Row="2"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="WIND SPEED"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="5"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="mph"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/><!--TODO: Add metric/imperial bool bindings. [VB]-->
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" 
+                             Grid.Row="3"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="CLOUDS"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="10"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="%"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" 
+                             Grid.Row="3"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="VISIBILITY"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="10"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="miles"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/><!--TODO: Add metric/imperial bool bindings. [VB]-->
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" 
+                             Grid.Row="4"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="HIGH DEW POINT"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="67"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="°F"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/><!--TODO: Add metric/imperial bool bindings. [VB]-->
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" 
+                             Grid.Row="4"
+                             Style="{StaticResource DetailsValueStackLayoutStyle}">
+                    <Label Text="LOW DEW POINT"
+                           Style="{StaticResource HourlyDetailsLabelStyle}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="59"
+                               Style="{StaticResource HourlyDetailsValueLabelStyle}"/><!--TODO: Add detail value bindings. [VB]-->
+                        <Label Text="°F"
+                               Style="{StaticResource HourlyDetailsValueMeasurementLabelStyle}"/><!--TODO: Add metric/imperial bool bindings. [VB]-->
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -2,12 +2,14 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AER.Enigma.UI.Views.Templates.LocationSearchResultTemplate">
-  <ContentView.Content>
-      <StackLayout>
-          <StackLayout Orientation="Horizontal">
-              <Label Text="{Binding City}"></Label>
-              <Label Text="{Binding State}"></Label>
-          </StackLayout>
-      </StackLayout>
-  </ContentView.Content>
+    <ContentView.Content>
+        <StackLayout BackgroundColor="{StaticResource BackgroundDarkTransparentBrush}"
+                     Padding="20"
+                     Opacity=".7">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding City}" TextColor="White"/>
+                <Label Text="{Binding State}" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
 </ContentView>
