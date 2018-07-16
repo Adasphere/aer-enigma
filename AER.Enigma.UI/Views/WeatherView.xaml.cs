@@ -1,20 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="WeatherView.xaml.cs" company="Adasphere">
+//   2018
+// </copyright>
+// <summary>
+//   Defines the WeatherView type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AER.Enigma.UI.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class WeatherView : ContentPage
-	{
-		public WeatherView ()
-		{
-			InitializeComponent ();
-		}
-	}
+    using Xamarin.Forms.Xaml;
+
+    /// <summary>
+    /// The weather view.
+    /// </summary>
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class WeatherView
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WeatherView"/> class.
+        /// </summary>
+        public WeatherView()
+        {
+            this.InitializeComponent();
+        }
+    }
 }

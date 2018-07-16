@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AER.Enigma.UI.Views.Templates.WeatherOverviewTemplate">
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0"
+                         Style="{StaticResource OverviewSlotStackLayoutStyle}">
+                <Image Source="https://image.freepik.com/free-icon/baseball-cap_318-64421.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <StackLayout Style="{StaticResource OverviewSlotLabelStackLayoutStyle}">
+                    <Label Text="Cap" 
+                           Style="{StaticResource ForecastAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+                    <Label Text="Higher UV index and no cloud coverage starting midday around noon." 
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/><!--TODO: Add attire description text binding [VB]-->
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1"
+                         Style="{StaticResource HorizontalBorder}"/>
+
+            <StackLayout Grid.Row="2"
+                         Style="{StaticResource OverviewSlotStackLayoutStyle}">
+                <Image Source="http://downloadicons.net/sites/default/files/t-shirt-icon-70635.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <StackLayout Style="{StaticResource OverviewSlotLabelStackLayoutStyle}">
+                    <Label Text="Short" 
+                           Style="{StaticResource ForecastAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+                    <Label Text="Mild to high temperatures throughout the day." 
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/><!--TODO: Add attire description text binding [VB]-->
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3"
+                         Style="{StaticResource HorizontalBorder}"/>
+
+            <StackLayout Grid.Row="4"
+                         Style="{StaticResource OverviewSlotStackLayoutStyle}">
+                <Image Source="https://cdn2.iconfinder.com/data/icons/glyphie-1/40/pants_cloth_trousers_clothing-512.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <StackLayout Style="{StaticResource OverviewSlotLabelStackLayoutStyle}">
+                    <Label Text="Short" 
+                           Style="{StaticResource ForecastAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+                    <Label Text="Mild to high temperatures throughout the day." 
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/><!--TODO: Add attire description text binding [VB]-->
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Grid.Row="5"
+                         Style="{StaticResource HorizontalBorder}"/>
+
+            <StackLayout Grid.Row="6"
+                         Style="{StaticResource OverviewSlotStackLayoutStyle}">
+                <Image Source="https://cdn1.iconfinder.com/data/icons/sports-set-2/96/Skate-Shoes-512.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <StackLayout Style="{StaticResource OverviewSlotLabelStackLayoutStyle}">
+                    <Label Text="Sneakers" 
+                           Style="{StaticResource ForecastAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+                    <Label Text="Mild to high temperatures throughout the day and no precipitation." 
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/><!--TODO: Add attire description text binding [VB]-->
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Grid.Row="7"
+                         Style="{StaticResource HorizontalBorder}"/>
+
+            <StackLayout Grid.Row="8"
+                         Style="{StaticResource OverviewSlotStackLayoutStyle}">
+                <Image Source="https://cdn3.iconfinder.com/data/icons/clothes-products/512/jacket-512.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <StackLayout Style="{StaticResource OverviewSlotLabelStackLayoutStyle}">
+                    <Label Text="Jacket" 
+                           Style="{StaticResource ForecastAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+                    <Label Text="Higher wind speeds starting early afternoon." 
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/><!--TODO: Add attire description text binding [VB]-->
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Grid.Row="9"
+                         Style="{StaticResource HorizontalBorder}"/>
+
+            <StackLayout Grid.Row="10"
+                         Style="{StaticResource OverviewSlotStackLayoutStyle}">
+                <Image Source="https://cdn1.iconfinder.com/data/icons/clothes-accessories-set/96/Sunglasses-W2-512.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <StackLayout Style="{StaticResource OverviewSlotLabelStackLayoutStyle}">
+                    <Label Text="Sun glasses and sunscreen" 
+                           Style="{StaticResource ForecastAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+                    <Label Text="Higher UV index and no cloud coverage starting midday around noon." 
+                           Style="{StaticResource ForecastDetailsLabelStyle}"/><!--TODO: Add attire description text binding [VB]-->
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

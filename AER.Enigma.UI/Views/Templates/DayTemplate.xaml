@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AER.Enigma.UI.Views.Templates.DayTemplate">
+    <!--TODO: UX NOTE: The day template cannot use a swipe feature since Android uses the swipe feature with their tabs. Modifying the UX to use a button click instead that would modify the context and display the next day’s data. [VB]-->
+    <!--TODO: Add code on the TapGestureRecognizer and text binding on the day label. [VB]-->
+    <!--TODO: The day selection needs to persist across all 3 tabs. [VB]-->
+    <ContentView.Content>
+        <Grid Margin="0,0,0,-6" 
+              Padding="15,10" 
+              BackgroundColor="{StaticResource BackgroundLightBlueBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--SUMMARY: Previous day button-->
+            <!--TODO: Add code to TapGestureRecognizer to display the previous day if applicable. [VB]-->
+            <StackLayout Grid.Column="0" 
+                         HorizontalOptions="End"
+                         Style="{StaticResource DayIconStackLayoutStyle}">
+                <!--Note: Image uses a TapGestureRecognizer - https://www.c-sharpcorner.com/UploadFile/e04e9a/xamarin-forms-image-button-recipe/-->
+                <Image x:Name="PreviousDayImage"
+                       Source="http://www.primalcom.com/images/Icon-arrow-left.png" 
+                       Aspect="AspectFit" 
+                       VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <!--SUMMARY: Date of current page-->
+            <Label Grid.Column="1" 
+                   Text="Today - 06/11/2018"
+                   Style="{StaticResource ForecastDetailsLabelStyle}"
+                   TextColor="{StaticResource LightTextBrush}"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   Margin="20,0"/><!--TODO: Add text binding for date display [VB]-->
+
+            <!--SUMMARY: Next day button-->
+            <!--TODO: Add code to TapGestureRecognizer to display the previous day if applicable. [VB]-->
+            <StackLayout Grid.Column="2" 
+                         HorizontalOptions="Start"
+                         Style="{StaticResource DayIconStackLayoutStyle}">
+                <!--Note: Image uses a TapGestureRecognizer - https://www.c-sharpcorner.com/UploadFile/e04e9a/xamarin-forms-image-button-recipe/-->
+                <Image x:Name="NextDayImage"
+                       Source="http://www.primalcom.com/images/Icon-arrow-left.png" 
+                       Aspect="AspectFit" 
+                       VerticalOptions="CenterAndExpand"
+                       Rotation="180"/>
+            </StackLayout>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

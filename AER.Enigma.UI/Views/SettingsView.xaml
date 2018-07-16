@@ -23,8 +23,7 @@
                            VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
                 <Label Grid.Column="1" 
-                       Text="Settings"
-                       Style="{StaticResource MenuLabelStyle}"/>
+                       Text="Settings"/>
                 <StackLayout Grid.Column="2" 
                              HeightRequest="20" 
                              WidthRequest="20"

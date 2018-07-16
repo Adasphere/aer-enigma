@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="LocationSearchResultsTemplate.xaml.cs" company="Adasphere">
+// <copyright file="BreakdownRangeTemplate.xaml.cs" company="Adasphere">
 //   2018
 // </copyright>
 // <summary>
-//   Defines the LocationSearchResultsTemplate type.
+//   Defines the BreakdownRangeTemplate type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -12,17 +12,17 @@ namespace AER.Enigma.UI.Views.Templates
     using Xamarin.Forms.Xaml;
 
     /// <summary>
-    /// The location search results template.
+    /// The breakdown range template.
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LocationSearchResultsTemplate
+    public partial class BreakdownRangeTemplate
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LocationSearchResultsTemplate"/> class.
+        /// Initializes a new instance of the <see cref="BreakdownRangeTemplate"/> class.
         /// </summary>
-        public LocationSearchResultsTemplate()
+        public BreakdownRangeTemplate ()
         {
-            this.InitializeComponent();
+            this.InitializeComponent ();
         }
     }
 }

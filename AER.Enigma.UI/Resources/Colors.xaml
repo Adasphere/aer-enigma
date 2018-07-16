@@ -1,21 +1,26 @@
 ﻿<ResourceDictionary 
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
->
-    <!--Button colors-->
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--SUMMARY: Button colors-->
     <Color x:Key="PrimaryButtonBrush">#2e709a</Color>
     <Color x:Key="PrimaryHoverBrush">#173359</Color>
     <Color x:Key="PrimaryButtonTextBrush">#ffffff</Color>
-    <!--Background colors-->
+    <!--SUMMARY: Background colors-->
     <Color x:Key="BackgroundBrush">#ffffff</Color>
     <Color x:Key="BackgroundLightBrush">#a1a7af</Color>
     <Color x:Key="BackgroundMedBrush">#495259</Color>
     <Color x:Key="BackgroundDarkBrush">#161a1f</Color>
+    <Color x:Key="BackgroundDarkTransparentBrush">#000000</Color>
     <Color x:Key="BackgroundLightBlueBrush">#94c0cc</Color>
     <Color x:Key="BackgroundDarkBlueBrush">#173359</Color>
     <Color x:Key="BackgroundMenuBarBrush">#2e709a</Color>
-    <!--Text colors-->
+    <Color x:Key="BorderLightBrush">#CED0D4</Color>
+    <!--SUMMARY: Text colors-->
     <Color x:Key="LightTextBrush">#ffffff</Color>
     <Color x:Key="MedTextBrush">#495259</Color>
     <Color x:Key="DarkTextBrush">#161a1f</Color>
+    <!--SUMMARY: Control colors-->
+    <Color x:Key="SearchBarBackgroundBrush">#ffffff</Color>
+
 </ResourceDictionary>

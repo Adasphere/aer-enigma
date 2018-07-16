@@ -1,20 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="SearchView.xaml.cs" company="Adasphere">
+//   2018
+// </copyright>
+// <summary>
+//   Defines the SearchView type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AER.Enigma.UI.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SearchView : ContentPage
-	{
-		public SearchView ()
-		{
-			InitializeComponent ();
-		}
-	}
+    using Xamarin.Forms.Xaml;
+
+    /// <summary>
+    /// The search view.
+    /// </summary>
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class SearchView
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SearchView"/> class.
+        /// </summary>
+        public SearchView()
+        {
+            this.InitializeComponent();
+        }
+    }
 }
