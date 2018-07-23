@@ -1,26 +1,26 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="LocationSearchResultsTemplate.xaml.cs" company="Adasphere">
+// <copyright file="WeatherOverviewView.xaml.cs" company="Adasphere">
 //   2018
 // </copyright>
 // <summary>
-//   Defines the LocationSearchResultsTemplate type.
+//   Defines the WeatherOverviewView type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace AER.Enigma.UI.Views.Templates
+namespace AER.Enigma.UI.Views
 {
     using Xamarin.Forms.Xaml;
 
     /// <summary>
-    /// The location search results template.
+    /// The weather overview view.
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LocationSearchResultsTemplate
+    public partial class WeatherOverviewView
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LocationSearchResultsTemplate"/> class.
+        /// Initializes a new instance of the <see cref="WeatherOverviewView"/> class.
         /// </summary>
-        public LocationSearchResultsTemplate()
+        public WeatherOverviewView()
         {
             this.InitializeComponent();
         }

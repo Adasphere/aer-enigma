@@ -1,20 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LocationSearchResultTemplate.xaml.cs" company="Adasphere">
+//   2018
+// </copyright>
+// <summary>
+//   Defines the LocationSearchResultTemplate type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AER.Enigma.UI.Views.Templates
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LocationSearchResultTemplate : ContentView
-	{
-		public LocationSearchResultTemplate ()
-		{
-			InitializeComponent ();
-		}
-	}
+    using Xamarin.Forms.Xaml;
+
+    /// <summary>
+    /// The location search result template.
+    /// </summary>
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class LocationSearchResultTemplate
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationSearchResultTemplate"/> class.
+        /// </summary>
+        public LocationSearchResultTemplate()
+        {
+            this.InitializeComponent();
+        }
+    }
 }

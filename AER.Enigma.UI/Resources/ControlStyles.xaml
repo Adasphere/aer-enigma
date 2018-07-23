@@ -1,16 +1,21 @@
 ﻿<ResourceDictionary 
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
->
-    <!--Label styles-->
-    <Style x:Key="MenuLabelStyle" TargetType="Label">
-        <Setter Property="HorizontalOptions" Value="Center"/>
-        <Setter Property="HorizontalTextAlignment" Value="Center"/>
-        <Setter Property="VerticalTextAlignment" Value="Center"/>
-        <Setter Property="FontAttributes" Value="Bold"/>
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+<!--SUMMARY: Fonts-->
+    <OnPlatform x:TypeArguments="x:String" x:Key="BoldTitleFont">
+        <On Platform="Android" Value="Ubuntu-Bold.ttf#Ubuntu" />
+        <On Platform="UWP" Value="/Assets/Ubuntu-Bold.ttf#Ubuntu" />
+        <On Platform="iOS" Value="Ubuntu-Bold" />
+    </OnPlatform>
+
+
+<!--SUMMARY: Label styles-->
+    <Style x:Key="SearchLabelStyle" TargetType="Label">
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
     </Style>
+    <!--Labels: Settings/menu-->
     <Style x:Key="SettingsLabelStyle" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Start"/>
         <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
@@ -33,20 +38,63 @@
         <Setter Property="Margin" Value="10,0"/>
         <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
     </Style>
+    <!--Labels: Multiple weather pages-->
     <Style x:Key="ForecastDetailsLabelStyle" TargetType="Label">
-        <Setter Property="VerticalTextAlignment" Value="Start"/>
-        <Setter Property="VerticalOptions" Value="Start"/>
-        <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
         <Setter Property="FontSize" Value="12"/>
-        <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+        <Setter Property="Margin" Value="0,-3,0,0"/>
     </Style>
-    <Style x:Key="ForecastDetailsValueLabelStyle" TargetType="Label">
-        <Setter Property="VerticalTextAlignment" Value="Start"/>
-        <Setter Property="VerticalOptions" Value="Start"/>
-        <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
-        <Setter Property="FontSize" Value="20"/>
-        <Setter Property="TextColor" Value="{StaticResource LightTextBrush}"/>
+    <!--Labels: Summary template labels-->
+    <Style x:Key="WeatherSummaryShortLabelStyle" TargetType="Label">
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+        <Setter Property="Margin" Value="0,0,0,5"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
     </Style>
+    <Style x:Key="WeatherSummaryDescriptionsLabelStyle" TargetType="Label">
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+    </Style>
+    <Style x:Key="WeatherSummaryDetailsLabelStyle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+    </Style>
+    <Style x:Key="WeatherSummaryDetailsValueLabelStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+    </Style>
+    <!--Labels: Overview page labels-->
+    <Style x:Key="ForecastAttireLabelStyle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+    </Style>
+    <!--Labels: Breakdown page labels-->
+    <Style x:Key="ForecastBreakdownTitleLabelStyle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="Margin" Value="15,5"/>
+    </Style>
+    <Style x:Key="ForecastBreakdownAttireLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+    <!--Labels: Tutorial page-->
     <Style x:Key="TutorialNumberLabelStyle" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="16"/>
@@ -60,6 +108,115 @@
         <Setter Property="Margin" Value="0,5"/>
         <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
     </Style>
+    <!--Labels: Details page-->
+    <Style x:Key="HourlyDetailsLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Margin" Value="0,-3,0,0"/>
+    </Style>
+    <Style x:Key="HourlyDetailsValueLabelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextBrush}"/>
+    </Style>
+    <Style x:Key="HourlyDetailsValueMeasurementLabelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="{StaticResource MedTextBrush}"/>
+    </Style>
+
+
+    <!--SUMMARY: Stack layout styles-->
+    <Style x:Key="NavigationBarIconStackLayoutStyle" TargetType="StackLayout">
+        <Setter Property="HeightRequest" Value="25"/>
+        <Setter Property="WidthRequest" Value="25"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+    </Style>
+    <Style x:Key="DayIconStackLayoutStyle" TargetType="StackLayout">
+        <Setter Property="HeightRequest" Value="15"/>
+        <Setter Property="WidthRequest" Value="15"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+    <Style x:Key="WeatherSummaryDetailsStackLayoutStyle" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+    <Style x:Key="OverviewSlotStackLayoutStyle" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Padding" Value="15,10"/>
+    </Style>
+    <Style x:Key="OverviewSlotLabelStackLayoutStyle" TargetType="StackLayout">
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
+    </Style>
+    <Style x:Key="BreakdownSlotStackLayoutStyle" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Padding" Value="15,10"/>
+    </Style>
+    <Style x:Key="DetailsValueStackLayoutStyle" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="Margin" Value="20"/>
+    </Style>
+
+
+    <!--SUMMARY: Border styles-->
+    <Style x:Key="HorizontalBorder" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="1"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource BorderLightBrush}"/>
+    </Style>
+    <Style x:Key="VerticalBorder" TargetType="BoxView">
+        <Setter Property="WidthRequest" Value="1"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource BorderLightBrush}"/>
+    </Style>
+
+
+    <!--SUMMARY: Image styles-->
+    <Style x:Key="WeatherAttireImageStyle" TargetType="Image">
+        <Setter Property="HeightRequest" Value="35"/>
+        <Setter Property="WidthRequest" Value="35"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+
+
+    <!--SUMMARY: Controls-->
+    <Style TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryButtonBrush}" />
+        <Setter Property="BorderColor" Value="{StaticResource PrimaryHoverBrush}" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryButtonTextBrush}" />
+        <Setter Property="HorizontalOptions" Value="Fill" />
+        <Setter Property="BorderRadius" Value="0" />
+        <Setter Property="BorderWidth" Value="0" />
+    </Style>
+    <Style TargetType="SearchBar">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="AttireIconStyle" TargetType="BoxView">
+        <!--TODO Change to an image once icons are created-->
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundMedBrush}"/>
+        <Setter Property="HeightRequest" Value="35"/>
+        <Setter Property="WidthRequest" Value="35"/>
+        <Setter Property="Margin" Value="15,5,10,5"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+
+
+
+
+    
+    
+    
+    
+    
+
     <Style x:Key="MainPageTitleStyle"
                    TargetType="Label">
 

@@ -7,15 +7,23 @@
             <StackLayout VerticalOptions="CenterAndExpand" 
                          HorizontalOptions="CenterAndExpand"
                          Padding="10">
-                <Label Text="Aer-Enigma"
-                       FontAttributes="Bold"
+                <Label Text="AER-Enigma"
+                       FontFamily="{StaticResource BoldTitleFont}"
                        TextColor="{StaticResource DarkTextBrush}"
                        FontSize="50" />
-                <ProgressBar IsVisible="True"
-                             ProgressColor="{StaticResource PrimaryButtonBrush}"
-                             HeightRequest="350"
-                             Progress="10"/>
-                <!--TODO: Modify progress bar to display a rotating image animation [VB]-->
+                <Image x:Name="Image" 
+                       Source="https://openclipart.org/image/2400px/svg_to_png/208526/sunicon.png" 
+                       VerticalOptions="CenterAndExpand" 
+                       HeightRequest="100" 
+                       WidthRequest="100" 
+                       Margin="0,20,0,0"/><!--TODO: Add custom loading icon [VB]-->
+                <Button x:Name="startButton" 
+                        Margin="20" 
+                        Text="Loading" 
+                        Clicked="StartAnimationButtonClicked" 
+                        VerticalOptions="End" 
+                        BackgroundColor="{StaticResource PrimaryButtonBrush}"
+                        TextColor="{StaticResource LightTextBrush}"/><!--Note: Button press is just to test the animation.-->
             </StackLayout>
         </Grid>
     </ContentPage.Content>

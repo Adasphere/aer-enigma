@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:AER.Enigma.UI.Views.Templates;assembly=AER.Enigma.UI"
+             x:Class="AER.Enigma.UI.Views.Templates.BreakdownRangeTemplate">
+    <ContentView.Content>
+        <Grid Margin="0,0,0,-6"
+              ColumnSpacing="0"
+              RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width=".5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--SUMMARY: Time frame label-->
+            <Grid Grid.Column="0" 
+                  Grid.ColumnSpan="3"
+                  Grid.Row="0"
+                  BackgroundColor="{StaticResource BorderLightBrush}">
+                <Label Text="Morning" 
+                       Style="{StaticResource ForecastBreakdownTitleLabelStyle}"/><!--TODO: Add binding for time frame label. (Morning/Afternoon/Evening) [VB]-->
+            </Grid>
+
+            <!--SUMMARY: Range summary details-->
+            <templates:WeatherSummaryDetailsTemplate Grid.Column="0" 
+                                                     Grid.ColumnSpan="3"
+                                                     Grid.Row="1" />
+
+            <!--Borders-->
+            <BoxView Grid.Column="1" 
+                     Grid.Row="2"
+                     Grid.RowSpan="6" 
+                     Style="{StaticResource VerticalBorder}"/>
+
+            <!--SUMMARY: Head slot-->
+            <StackLayout Grid.Column="0" 
+                         Grid.Row="3"
+                         Style="{StaticResource BreakdownSlotStackLayoutStyle}">
+                <Image Source="https://image.freepik.com/free-icon/baseball-cap_318-64421.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <Label Text="Cap" 
+                       Style="{StaticResource ForecastBreakdownAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+            </StackLayout>
+
+            <!--SUMMARY: Top slot-->
+            <StackLayout Grid.Column="2" 
+                         Grid.Row="3"
+                         Style="{StaticResource BreakdownSlotStackLayoutStyle}">
+                <Image Source="http://downloadicons.net/sites/default/files/t-shirt-icon-70635.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <Label Text="Short" 
+                       Style="{StaticResource ForecastBreakdownAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+            </StackLayout>
+
+            <!--Border-->
+            <StackLayout Grid.Column="0" 
+                         Grid.ColumnSpan="3" 
+                         Grid.Row="4"
+                         Style="{StaticResource HorizontalBorder}"/>
+
+            <!--SUMMARY: Bottom slot-->
+            <StackLayout Grid.Column="0" 
+                         Grid.Row="5"
+                         Style="{StaticResource BreakdownSlotStackLayoutStyle}">
+                <Image Source="https://cdn2.iconfinder.com/data/icons/glyphie-1/40/pants_cloth_trousers_clothing-512.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <Label Text="Short" 
+                       Style="{StaticResource ForecastBreakdownAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+            </StackLayout>
+
+            <!--SUMMARY: Feet slot-->
+            <StackLayout Grid.Column="2" 
+                         Grid.Row="5"
+                         Style="{StaticResource BreakdownSlotStackLayoutStyle}">
+                <Image Source="https://cdn1.iconfinder.com/data/icons/sports-set-2/96/Skate-Shoes-512.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <Label Text="Sneakers"
+                       Style="{StaticResource ForecastBreakdownAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+            </StackLayout>
+
+            <!--Border-->
+            <StackLayout Grid.Column="0" 
+                         Grid.ColumnSpan="3" 
+                         Grid.Row="6"
+                         Style="{StaticResource HorizontalBorder}"/>
+
+            <!--SUMMARY: Jacket slot-->
+            <StackLayout Grid.Column="0" 
+                         Grid.Row="7"
+                         Style="{StaticResource BreakdownSlotStackLayoutStyle}">
+                <Image Source="https://cdn3.iconfinder.com/data/icons/clothes-products/512/jacket-512.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <Label Text="Wind jacket" 
+                       Style="{StaticResource ForecastBreakdownAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+            </StackLayout>
+
+            <!--SUMMARY: Accessories slot-->
+            <StackLayout Grid.Column="2" 
+                         Grid.Row="7"
+                         Style="{StaticResource BreakdownSlotStackLayoutStyle}">
+                <Image Source="https://cdn1.iconfinder.com/data/icons/clothes-accessories-set/96/Sunglasses-W2-512.png"
+                       Style="{StaticResource WeatherAttireImageStyle}"/><!--TODO: Replace with custom icon [VB]-->
+                <Label Text="Sun glasses and sunscreen" 
+                       Style="{StaticResource ForecastBreakdownAttireLabelStyle}"/><!--TODO: Add attire text binding [VB]-->
+            </StackLayout>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

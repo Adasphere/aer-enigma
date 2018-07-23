@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:AER.Enigma.UI.Views.Templates;assembly=AER.Enigma.UI"
+             x:Class="AER.Enigma.UI.Views.WeatherBreakdownView"
+             Title="Breakdown">
+    <ContentPage.Content>
+        <Grid BackgroundColor="{StaticResource BackgroundBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--SUMMARY: Menu/navigation bar-->
+            <templates:MenuNavigationBarTemplate Grid.Row="0" />
+
+            <!--SUMMARY: Day template and tab options-->
+            <templates:DayTemplate Grid.Row="1"/>
+
+            <ScrollView Grid.Row="2">
+                <StackLayout>
+                    <templates:WeatherSummaryTemplate/>
+                    <templates:WeatherBreakdownTemplate/>
+                </StackLayout>
+            </ScrollView>
+
+            <!--SUMMARY: Search list-->
+            <!--TODO: Comment back in when the viewmodel code is reimplemented [VB]-->
+            <!--<templates:LocationSearchResultsTemplate Grid.Row="1" Grid.RowSpan="2"/>-->
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
