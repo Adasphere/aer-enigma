@@ -59,6 +59,10 @@
       <Project>{6e5bd7bc-daee-44ce-b309-dcd1613731ec}</Project>
       <Name>AER.Enigma.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AER.Enigma.Models.Tests\AER.Enigma.Models.Tests.csproj">
+      <Project>{C3DFD195-D722-4A6B-9D80-8CD95864AB6E}</Project>
+      <Name>AER.Enigma.Models.Tests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
