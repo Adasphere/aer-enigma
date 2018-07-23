@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Weather.cs" company="Adasphere">
-//   2018
+// <copyright file="Weather.cs"  company="Adasphere Incorporated">
+//   Copyright (c) 2018 Adasphere Incorporated. All rights reserved.
 // </copyright>
 // <summary>
 //   Represents weather information
@@ -16,72 +16,6 @@ namespace AER.Enigma.Models.Business
     /// </summary>
     public class Weather
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Weather"/> class.
-        /// </summary>
-        public Weather()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Weather"/> class.
-        /// </summary>
-        /// <param name="startDateTime">
-        /// The start date time.
-        /// </param>
-        /// <param name="endDateTime">
-        /// The end date time.
-        /// </param>
-        /// <param name="dewPoint">
-        /// The dew point.
-        /// </param>
-        /// <param name="heatIndex">
-        /// The heat index.
-        /// </param>
-        /// <param name="windSpeed">
-        /// The wind speed.
-        /// </param>
-        /// <param name="cloudAmount">
-        /// The cloud amount.
-        /// </param>
-        /// <param name="probabilityPrecipitation">
-        /// The probability precipitation.
-        /// </param>
-        /// <param name="humidity">
-        /// The humidity.
-        /// </param>
-        /// <param name="windDirection">
-        /// The wind direction.
-        /// </param>
-        /// <param name="temperature">
-        /// The temperature.
-        /// </param>
-        /// <param name="windGust">
-        /// The wind gust.
-        /// </param>
-        /// <param name="precipitation">
-        /// The precipitation.
-        /// </param>
-        /// <param name="weatherDescription">
-        /// The weather description.
-        /// </param>
-        public Weather(DateTime startDateTime, DateTime endDateTime, double? dewPoint, double? heatIndex, double? windSpeed, double? cloudAmount, double? probabilityPrecipitation, double? humidity, int? windDirection, double? temperature, double? windGust, double? precipitation, string weatherDescription)
-        {
-            this.StartDateTime = startDateTime;
-            this.EndDateTime = endDateTime;
-            this.DewPoint = dewPoint;
-            this.HeatIndex = heatIndex;
-            this.WindSpeed = windSpeed;
-            this.CloudAmount = cloudAmount;
-            this.ProbabilityPrecipitation = probabilityPrecipitation;
-            this.Humidity = humidity;
-            this.WindDirection = windDirection;
-            this.Temperature = temperature;
-            this.WindGust = windGust;
-            this.Precipitation = precipitation;
-            this.WeatherDescription = weatherDescription;
-        }
-
         /// <summary>
         /// Gets or sets the start date time.
         /// </summary>

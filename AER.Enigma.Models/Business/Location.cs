@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Location.cs" company="Adasphere">
-//   2018
+// <copyright file="Location.cs"  company="Adasphere Incorporated">
+//   Copyright (c) 2018 Adasphere Incorporated. All rights reserved.
 // </copyright>
 // <summary>
 //   Represents a geographic location
