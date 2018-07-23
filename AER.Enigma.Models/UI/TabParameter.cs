@@ -17,6 +17,10 @@ namespace AER.Enigma.Models.UI
         /// <summary>
         /// 
         /// </summary>
-        public int TabIndex { get; set; }
+        public int TabIndex
+        {
+            get;
+            set;
+        }
     }
 }
